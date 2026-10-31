@@ -1,595 +1,385 @@
+import 'dart:convert';
+import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
-// PhishGuard GR - Flutter mockup (ένα αρχείο, χωρίς εξωτερικά packages).
-// ΣΗΜΕΙΩΣΗ ΓΙΑ ΤΗΝ ΕΡΓΑΣΙΑ / ΠΑΡΟΥΣΙΑΣΗ:
-// - Το "predictive model" είναι rule-based scoring (κανόνες με βάρη), όχι εκπαιδευμένο ML μοντέλο.
-// - Τα στατιστικά του Dashboard είναι DEMO δεδομένα.
-// - Ιστορικό, αναφορές και σύνολα κρατιούνται μόνο στη μνήμη (χάνονται όταν κλείσει η εφαρμογή).
+void main() => runApp(const ReWearApp());
 
-void main() => runApp(const PhishGuardApp());
+const ink = Color(0xFF262127);
+const muted = Color(0xFF786E77);
+const plum = Color(0xFF6D3E59);
+const blush = Color(0xFFFFE7E9);
+const cream = Color(0xFFFFF9F4);
+const lavender = Color(0xFFEAE4F4);
 
-const kBg = Color(0xFF1E1E2E);
-const kBar = Color(0xFF181825);
-const kCard = Color(0xFF313244);
-const kAccent = Color(0xFFCBA6F7);
-const kGreen = Color(0xFFA6E3A1);
-const kYellow = Color(0xFFF9E2AF);
-const kRed = Color(0xFFF38BA8);
-
-// ---------- Μοντέλα ----------
-class Reason {
-  final bool bad;
-  final String text;
-  const Reason(this.bad, this.text);
+class Idea {
+  final String id, objectId, objectName, material, size, transformation;
+  final String location, occasion, style, difficulty, notes;
+  final bool extras;
+  const Idea({required this.id, required this.objectId, required this.objectName,
+    required this.material, required this.size, required this.transformation,
+    required this.location, required this.occasion, required this.style,
+    required this.difficulty, required this.notes, required this.extras});
+  factory Idea.fromJson(Map<String, dynamic> j) => Idea(
+    id: '${j['recommendation_id'] ?? ''}', objectId: '${j['object_id'] ?? ''}',
+    objectName: '${j['object_name_el'] ?? ''}', material: '${j['object_material'] ?? ''}',
+    size: '${j['object_size'] ?? ''}', transformation: '${j['transformation_el'] ?? ''}',
+    location: '${j['wear_location'] ?? ''}', occasion: '${j['occasion'] ?? ''}',
+    style: '${j['style'] ?? ''}', difficulty: '${j['difficulty'] ?? ''}',
+    notes: '${j['safety_notes_el'] ?? ''}',
+    extras: '${j['requires_extra_material'] ?? ''}'.toLowerCase() == 'yes');
 }
 
-class ScanResult {
-  final String text;
-  final int score;
-  final List<Reason> reasons;
-  const ScanResult(this.text, this.score, this.reasons);
+const occasions = <String, String>{
+  'any': 'Οποιαδήποτε', 'everyday': 'Καθημερινά', 'outing': 'Βόλτα',
+  'party': 'Πάρτι', 'festival': 'Φεστιβάλ', 'beach': 'Παραλία',
+  'summer': 'Καλοκαίρι', 'winter': 'Χειμώνας', 'travel': 'Ταξίδι', 'home': 'Σπίτι',
+};
+const styles = <String, String>{
+  'any': 'Έκπληξέ με', 'boho': 'Boho', 'artsy': 'Artistic',
+  'retro': 'Retro', 'cute': 'Cute', 'minimal': 'Minimal', 'cozy': 'Cozy',
+  'casual': 'Casual', 'streetwear': 'Streetwear', 'elegant': 'Elegant',
+  'quirky': 'Quirky', 'relaxed': 'Relaxed', 'sporty': 'Sporty',
+  'romantic': 'Romantic', 'vintage': 'Vintage', 'avant-garde': 'Avant-garde',
+};
+const locations = <String, String>{
+  'hair': 'Μαλλιά', 'hat': 'Κεφάλι', 'bag': 'Τσάντα', 'wrist': 'Καρπός',
+  'neck': 'Λαιμός', 'shoulders': 'Ώμοι', 'waist': 'Μέση',
+};
+
+String emojiFor(String location) => switch (location) {
+  'hair' => '🎀', 'hat' => '👒', 'bag' => '👜', 'wrist' => '🪡',
+  'neck' => '🧣', 'shoulders' => '🧥', 'waist' => '✨', _ => '🌷',
+};
+
+class ReWearApp extends StatelessWidget {
+  const ReWearApp({super.key});
+  @override
+  Widget build(BuildContext context) => MaterialApp(
+    title: 'ReWear the Unexpected', debugShowCheckedModeBanner: false,
+    theme: ThemeData(
+      useMaterial3: true, scaffoldBackgroundColor: cream,
+      colorScheme: ColorScheme.fromSeed(seedColor: plum, primary: plum, surface: cream),
+      textTheme: const TextTheme(
+        headlineLarge: TextStyle(fontWeight: FontWeight.w900, letterSpacing: -1.3, color: ink),
+        headlineMedium: TextStyle(fontWeight: FontWeight.w800, color: ink),
+        titleLarge: TextStyle(fontWeight: FontWeight.w800, color: ink),
+        titleMedium: TextStyle(fontWeight: FontWeight.w700, color: ink),
+        bodyMedium: TextStyle(color: ink, height: 1.45),
+      ),
+      filledButtonTheme: FilledButtonThemeData(style: FilledButton.styleFrom(
+        backgroundColor: plum, foregroundColor: Colors.white,
+        padding: const EdgeInsets.symmetric(vertical: 17, horizontal: 20),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)))),
+      inputDecorationTheme: InputDecorationTheme(
+        filled: true, fillColor: Colors.white,
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(16), borderSide: BorderSide.none),
+      ),
+    ), home: const ReWearHome(),
+  );
 }
 
-class Tier {
-  final Color color;
-  final String label;
-  final List<String> advice;
-  const Tier(this.color, this.label, this.advice);
+class ReWearHome extends StatefulWidget {
+  const ReWearHome({super.key});
+  @override
+  State<ReWearHome> createState() => _ReWearHomeState();
 }
 
-// ---------- Scoring ----------
-// Αφαίρεση τόνων/κεφαλαίων ώστε να ταιριάζουν και κείμενα με ΚΕΦΑΛΑΙΑ
-String norm(String s) {
-  const map = {
-    'ά': 'α', 'έ': 'ε', 'ή': 'η', 'ί': 'ι', 'ό': 'ο', 'ύ': 'υ', 'ώ': 'ω',
-    'ϊ': 'ι', 'ϋ': 'υ', 'ΐ': 'ι', 'ΰ': 'υ', 'ς': 'σ',
+class _ReWearHomeState extends State<ReWearHome> {
+  List<Idea> ideas = [];
+  bool loading = true;
+  int page = 0; // 0 welcome, 1 object, 2 preferences, 3 results, 4 saved
+  String? chosenObject;
+  String occasion = 'any', style = 'any';
+  String search = '';
+  final saved = <String>{};
+  final rand = Random();
+
+  @override
+  void initState() {
+    super.initState();
+    _load();
+  }
+
+  Future<void> _load() async {
+    try {
+      final raw = await rootBundle.loadString('assets/data/recommendations.json');
+      final decoded = jsonDecode(raw);
+      if (decoded is! List) throw const FormatException('Expected a JSON list');
+      if (!mounted) return;
+      setState(() { ideas = decoded.map((e) => Idea.fromJson(Map<String, dynamic>.from(e as Map))).toList(); loading = false; });
+    } catch (e) {
+      if (!mounted) return;
+      setState(() => loading = false);
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Δεν φορτώθηκαν οι προτάσεις: $e')));
+    }
+  }
+
+  Map<String, String> get objects => {
+    for (final i in ideas) i.objectId: i.objectName,
   };
-  final buf = StringBuffer();
-  for (final ch in s.toLowerCase().split('')) {
-    buf.write(map[ch] ?? ch);
-  }
-  return buf.toString();
-}
 
-ScanResult computeScore(String original) {
-  final t = norm(original);
-  int score = 0;
-  final reasons = <Reason>[];
-
-  final urlMatch = RegExp(r'https?://[^\s]+|www\.[^\s]+').firstMatch(t);
-  if (urlMatch != null) {
-    score += 20;
-    reasons.add(const Reason(true, 'Το μήνυμα περιέχει σύνδεσμο.'));
-
-    const official = ['elta.gr', 'eurobank.gr', 'alpha.gr', 'piraeusbank.gr', 'nbg.gr', 'dei.gr'];
-    final host = urlMatch
-        .group(0)!
-        .replaceFirst(RegExp(r'^https?://'), '')
-        .split(RegExp(r'[/?#]'))
-        .first;
-    final isOfficial = official.any((d) => host == d || host.endsWith('.$d'));
-    if (!isOfficial) {
-      score += 30;
-      reasons.add(Reason(true, 'Ύποπτο domain: $host (δεν ανήκει στον επίσημο φορέα).'));
-    }
-    if (RegExp(r'\.(xyz|top|net|info|click|online)$').hasMatch(host)) {
-      score += 10;
-      reasons.add(const Reason(true, 'Ασυνήθιστη κατάληξη domain.'));
-    }
+  List<Idea> get ranked {
+    final candidates = ideas.where((i) => i.objectId == chosenObject).toList();
+    int score(Idea i) => (occasion != 'any' && i.occasion == occasion ? 4 : 0) +
+      (style != 'any' && i.style == style ? 3 : 0) + (i.difficulty == 'easy' ? 1 : 0);
+    candidates.sort((a, b) => score(b).compareTo(score(a)));
+    return candidates;
   }
 
-  const urgent = [
-    'ανασταλ', 'κλειδωθηκε', 'αμεσα', 'επειγον', 'σημερα',
-    'τελευταια ειδοποιηση', 'δεν επιδοθηκε',
-  ];
-  final hits = urgent.where((w) => t.contains(w)).length;
-  if (hits > 0) {
-    score += (hits * 12).clamp(0, 25);
-    reasons.add(Reason(true, 'Επείγουσα γλώσσα ($hits ενδείξεις).'));
+  void _randomObject() {
+    final keys = objects.keys.toList();
+    if (keys.isEmpty) return;
+    setState(() { chosenObject = keys[rand.nextInt(keys.length)]; page = 2; });
   }
 
-  if (RegExp(r'(κωδικ|στοιχεια|καρτα|πληρωμ|επιβεβαι|ενημερωστε|πατηστε|συνδεσμο)').hasMatch(t)) {
-    score += 15;
-    reasons.add(const Reason(true, 'Ζητά ενέργεια, προσωπικά στοιχεία ή πληρωμή.'));
-  }
+  void _info() => showModalBottomSheet<void>(
+    context: context, isScrollControlled: true, showDragHandle: true,
+    shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(28))),
+    builder: (ctx) => SafeArea(child: Padding(padding: const EdgeInsets.fromLTRB(26, 12, 26, 32),
+      child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
+        const Text('🌸  Τι είναι το ReWear;', style: TextStyle(fontSize: 25, fontWeight: FontWeight.w900)),
+        const SizedBox(height: 14),
+        const Text('Μεταμόρφωσε αντικείμενα που ήδη έχεις σε απρόσμενα αξεσουάρ. Διάλεξε αντικείμενο, περίσταση και στυλ και ανακάλυψε ιδέες!'),
+        const SizedBox(height: 12),
+        const Text('Αυτή είναι μια διαδραστική προεπισκόπηση (HW1). Οι προτάσεις προέρχονται από συνθετικό dataset. Δεν υπάρχει ακόμη εκπαιδευμένο recommender ή αυτόματη αναγνώριση εικόνας.', style: TextStyle(color: muted)),
+        const SizedBox(height: 18),
+        SizedBox(width: double.infinity, child: FilledButton(onPressed: () => Navigator.pop(ctx), child: const Text('Κατάλαβα!'))),
+      ]))),
+  );
 
-  score = score.clamp(0, 98);
-  if (score < 15) {
-    score = score < 3 ? 3 : score;
-    reasons.add(const Reason(false, 'Δεν εντοπίστηκαν ύποπτα στοιχεία.'));
-  }
-  return ScanResult(original, score, reasons);
-}
+  Widget _topBar({bool back = false}) => Padding(
+    padding: const EdgeInsets.fromLTRB(22, 14, 22, 12),
+    child: Row(children: [
+      if (back) IconButton(onPressed: () => setState(() => page = page == 4 ? 0 : page - 1), icon: const Icon(Icons.arrow_back_ios_new_rounded))
+      else const Text('✳', style: TextStyle(fontSize: 28, color: plum)),
+      const SizedBox(width: 7),
+      const Expanded(child: Text('rewear.', style: TextStyle(fontSize: 24, letterSpacing: -1, fontWeight: FontWeight.w900, color: ink))),
+      IconButton(tooltip: 'Αποθηκευμένα', onPressed: () => setState(() => page = 4), icon: Badge(
+        isLabelVisible: saved.isNotEmpty, label: Text('${saved.length}'), child: const Icon(Icons.favorite_border_rounded))),
+      IconButton(tooltip: 'Πληροφορίες', onPressed: _info, icon: const Icon(Icons.info_outline_rounded)),
+    ]),
+  );
 
-// Τρεις βαθμίδες: <30 ασφαλές, 30-60 ύποπτο, >60 κίνδυνος
-Tier tierOf(int score) {
-  if (score < 30) {
-    return const Tier(kGreen, 'ΧΑΜΗΛΟΣ ΚΙΝΔΥΝΟΣ (Ασφαλές)', [
-      'Το μήνυμα φαίνεται ασφαλές.',
-      'Αν έχετε αμφιβολία, επικοινωνήστε με τον φορέα από το επίσημο site του.',
-    ]);
-  }
-  if (score <= 60) {
-    return const Tier(kYellow, 'ΥΠΟΠΤΟ (Προσοχή)', [
-      'Μην πατήσετε συνδέσμους χωρίς έλεγχο.',
-      'Επικοινωνήστε με τον φορέα από το επίσημο site ή τηλέφωνο.',
-      'Αν δεν είστε σίγουροι, αγνοήστε το μήνυμα.',
-    ]);
-  }
-  return const Tier(kRed, 'ΥΨΗΛΟΣ ΚΙΝΔΥΝΟΣ (Phishing)', [
-    'ΜΗΝ πατήσετε το σύνδεσμο.',
-    'ΜΗΝ δώσετε κωδικούς ή στοιχεία κάρτας.',
-    'Διαγράψτε το μήνυμα και αναφέρετέ το στην κοινότητα.',
+  Widget _tag(String text, {Color color = lavender}) => Container(
+    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
+    decoration: BoxDecoration(color: color, borderRadius: BorderRadius.circular(24)),
+    child: Text(text, style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 12, color: ink)),
+  );
+
+  Widget _welcome() => ListView(padding: const EdgeInsets.fromLTRB(24, 18, 24, 28), children: [
+    const SizedBox(height: 30),
+    _tag('STYLE WHAT YOU ALREADY OWN', color: blush),
+    const SizedBox(height: 22),
+    const Text('Ordinary objects.\nExtraordinary style.', style: TextStyle(
+      fontSize: 43, height: 1.07, letterSpacing: -2, fontWeight: FontWeight.w900, color: ink)),
+    const SizedBox(height: 15),
+    const Text('Δώσε μια δεύτερη ζωή σε καθημερινά αντικείμενα.\nΗ πιο δημιουργική ντουλάπα είναι ήδη γύρω σου.',
+      style: TextStyle(fontSize: 15, color: muted, height: 1.6)),
+    const SizedBox(height: 32),
+    Container(height: 230, decoration: BoxDecoration(
+      gradient: const LinearGradient(colors: [Color(0xFFF9D6D8), Color(0xFFE7DCF1)]),
+      borderRadius: BorderRadius.circular(32)),
+      child: const Stack(alignment: Alignment.center, children: [
+        Positioned(left: 18, top: 24, child: Text('✿', style: TextStyle(fontSize: 60, color: Colors.white))),
+        Text('🧣  ➜  🎀', style: TextStyle(fontSize: 56)),
+        Positioned(right: 17, bottom: 22, child: Text('make it yours ↗', style: TextStyle(fontWeight: FontWeight.w700, color: plum))),
+      ])),
+    const SizedBox(height: 28),
+    SizedBox(width: double.infinity, child: FilledButton.icon(
+      onPressed: () => setState(() => page = 1), icon: const Icon(Icons.auto_awesome_rounded), label: const Text('Βρες την επόμενη ιδέα σου'))),
+    const SizedBox(height: 10),
+    Center(child: TextButton.icon(onPressed: _randomObject, icon: const Icon(Icons.shuffle_rounded), label: const Text('Έκπληξέ με με ένα αντικείμενο'))),
+    const SizedBox(height: 14),
+    Text('${objects.length} αντικείμενα  ·  ${ideas.length} δημιουργικές ιδέες',
+      textAlign: TextAlign.center, style: const TextStyle(color: muted, fontSize: 12)),
   ]);
-}
 
-// ---------- App ----------
-class PhishGuardApp extends StatelessWidget {
-  const PhishGuardApp({super.key});
+  Widget _objectPage() {
+    final filtered = objects.entries.where((e) => e.value.toLowerCase().contains(search.trim().toLowerCase())).toList();
+    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      const Padding(padding: EdgeInsets.fromLTRB(24, 16, 24, 8), child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Text('ΒΗΜΑ 01 / 03', style: TextStyle(color: plum, fontWeight: FontWeight.w800, letterSpacing: 1.5, fontSize: 12)),
+        SizedBox(height: 9), Text('Τι έχεις διαθέσιμο;', style: TextStyle(fontSize: 30, fontWeight: FontWeight.w900, color: ink)),
+        SizedBox(height: 8), Text('Διάλεξε ένα συνηθισμένο αντικείμενο για μια ασυνήθιστη ιδέα.', style: TextStyle(color: muted)),
+      ])),
+      Padding(padding: const EdgeInsets.fromLTRB(24, 15, 24, 10), child: TextField(
+        onChanged: (v) => setState(() => search = v),
+        decoration: const InputDecoration(prefixIcon: Icon(Icons.search), hintText: 'Αναζήτησε αντικείμενο…'),
+      )),
+      Expanded(child: filtered.isEmpty ? const Center(child: Text('Δεν βρέθηκε αντικείμενο.')) :
+        GridView.builder(padding: const EdgeInsets.fromLTRB(24, 8, 24, 24),
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, childAspectRatio: 1.04, crossAxisSpacing: 13, mainAxisSpacing: 13),
+          itemCount: filtered.length, itemBuilder: (ctx, index) {
+            final e = filtered[index];
+            final sample = ideas.firstWhere((i) => i.objectId == e.key);
+            return InkWell(borderRadius: BorderRadius.circular(24),
+              onTap: () => setState(() { chosenObject = e.key; page = 2; }),
+              child: Container(padding: const EdgeInsets.all(14), decoration: BoxDecoration(
+                color: index.isEven ? blush : lavender, borderRadius: BorderRadius.circular(24)),
+                child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+                  Text(emojiFor(sample.location), style: const TextStyle(fontSize: 39)),
+                  Text(e.value, maxLines: 2, overflow: TextOverflow.ellipsis, style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 15, color: ink)),
+                  const Align(alignment: Alignment.centerRight, child: Icon(Icons.arrow_outward_rounded, color: plum, size: 19)),
+                ])),
+            );
+          })),
+    ]);
+  }
+
+  Widget _choiceGroup(String heading, Map<String, String> options, String selected, ValueChanged<String> change) => Column(
+    crossAxisAlignment: CrossAxisAlignment.start, children: [
+      Text(heading, style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w800)),
+      const SizedBox(height: 13),
+      Wrap(spacing: 9, runSpacing: 9, children: options.entries.map((e) => ChoiceChip(
+        label: Text(e.value), selected: selected == e.key, onSelected: (_) => change(e.key),
+        selectedColor: blush, backgroundColor: Colors.white,
+        side: BorderSide(color: selected == e.key ? plum : const Color(0xFFEFE8E8)),
+        labelStyle: TextStyle(color: selected == e.key ? plum : ink, fontWeight: FontWeight.w700),
+      )).toList()),
+    ]);
+
+  Widget _preferences() => ListView(padding: const EdgeInsets.fromLTRB(24, 16, 24, 30), children: [
+    const Text('ΒΗΜΑ 02 / 03', style: TextStyle(color: plum, fontWeight: FontWeight.w800, letterSpacing: 1.5, fontSize: 12)),
+    const SizedBox(height: 9),
+    const Text('Κάν’ το δικό σου.', style: TextStyle(fontSize: 31, fontWeight: FontWeight.w900, color: ink)),
+    const SizedBox(height: 8),
+    const Text('Επίλεξε πού θα πας και τι διάθεση έχεις σήμερα.', style: TextStyle(color: muted)),
+    const SizedBox(height: 23),
+    Container(padding: const EdgeInsets.all(17), decoration: BoxDecoration(color: lavender, borderRadius: BorderRadius.circular(20)),
+      child: Row(children: [const Text('🎁', style: TextStyle(fontSize: 32)), const SizedBox(width: 15),
+        Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          const Text('ΤΟ ΑΝΤΙΚΕΙΜΕΝΟ ΣΟΥ', style: TextStyle(fontSize: 10, color: muted, fontWeight: FontWeight.bold)),
+          Text(objects[chosenObject] ?? '', style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w800))])),
+        TextButton(onPressed: () => setState(() => page = 1), child: const Text('Αλλαγή'))])),
+    const SizedBox(height: 28),
+    _choiceGroup('Ποια είναι η περίσταση;', occasions, occasion, (v) => setState(() => occasion = v)),
+    const SizedBox(height: 27),
+    _choiceGroup('Ποιο είναι το στυλ σου;', styles, style, (v) => setState(() => style = v)),
+    const SizedBox(height: 30),
+    FilledButton.icon(onPressed: () => setState(() => page = 3),
+      icon: const Icon(Icons.auto_awesome_rounded), label: const Text('Δείξε μου ιδέες')),
+  ]);
+
+  Widget _ideaCard(Idea idea, int rank) {
+    final exactOccasion = occasion != 'any' && occasion == idea.occasion;
+    final exactStyle = style != 'any' && style == idea.style;
+    final match = exactOccasion && exactStyle ? 'Ταιριάζει σε περίσταση & στυλ' :
+      exactOccasion ? 'Ταιριάζει στην περίσταση' : exactStyle ? 'Ταιριάζει στο στυλ' : 'Εναλλακτική ιδέα για σένα';
+    return Container(margin: const EdgeInsets.only(bottom: 14), decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(26), color: Colors.white,
+      boxShadow: const [BoxShadow(color: Color(0x0D6D3E59), blurRadius: 14, offset: Offset(0, 5))]),
+      child: InkWell(borderRadius: BorderRadius.circular(26), onTap: () => _details(idea),
+        child: Padding(padding: const EdgeInsets.all(16), child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Container(width: 81, height: 103, alignment: Alignment.center,
+            decoration: BoxDecoration(color: rank.isEven ? blush : lavender, borderRadius: BorderRadius.circular(18)),
+            child: Text(emojiFor(idea.location), style: const TextStyle(fontSize: 38))),
+          const SizedBox(width: 14),
+          Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Text('IDEA #${rank + 1}', style: const TextStyle(fontSize: 10, letterSpacing: 1, fontWeight: FontWeight.w900, color: plum)),
+            const SizedBox(height: 5),
+            Text(idea.transformation, style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w900, color: ink)),
+            const SizedBox(height: 8),
+            Text(match, style: const TextStyle(fontSize: 12, color: muted)),
+            const SizedBox(height: 7),
+            Text('${locations[idea.location] ?? idea.location} · ${styles[idea.style] ?? idea.style}',
+              style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: plum)),
+          ])),
+          IconButton(tooltip: 'Αποθήκευση', constraints: const BoxConstraints(), padding: EdgeInsets.zero,
+            onPressed: () => setState(() { if (!saved.add(idea.id)) saved.remove(idea.id); }),
+            icon: Icon(saved.contains(idea.id) ? Icons.favorite_rounded : Icons.favorite_border_rounded,
+              color: saved.contains(idea.id) ? plum : muted)),
+        ]))),
+    );
+  }
+
+  Widget _results() {
+    final results = ranked;
+    return ListView(padding: const EdgeInsets.fromLTRB(24, 16, 24, 28), children: [
+      const Text('ΒΗΜΑ 03 / 03', style: TextStyle(color: plum, fontWeight: FontWeight.w800, letterSpacing: 1.5, fontSize: 12)),
+      const SizedBox(height: 9),
+      const Text('Your rewear edit ✨', style: TextStyle(fontSize: 31, fontWeight: FontWeight.w900, color: ink)),
+      const SizedBox(height: 8),
+      Text('Βρήκαμε ${results.length} ιδέες για: ${objects[chosenObject] ?? ''}', style: const TextStyle(color: muted)),
+      const SizedBox(height: 13),
+      const Text('Οι προτάσεις κατατάσσονται ενδεικτικά βάσει των επιλογών σου.',
+        style: TextStyle(color: muted, fontSize: 12)),
+      const SizedBox(height: 20),
+      ...results.asMap().entries.map((e) => _ideaCard(e.value, e.key)),
+      const SizedBox(height: 12),
+      OutlinedButton.icon(onPressed: () => setState(() => page = 2),
+        icon: const Icon(Icons.tune_rounded), label: const Text('Άλλαξε περίσταση / στυλ')),
+      TextButton(onPressed: () => setState(() { page = 1; search = ''; }), child: const Text('Δοκίμασε άλλο αντικείμενο')),
+    ]);
+  }
+
+  Widget _savedPage() {
+    final list = ideas.where((e) => saved.contains(e.id)).toList();
+    return ListView(padding: const EdgeInsets.fromLTRB(24, 16, 24, 28), children: [
+      const Text('ΣΥΛΛΟΓΗ', style: TextStyle(color: plum, fontWeight: FontWeight.w800, letterSpacing: 1.5, fontSize: 12)),
+      const SizedBox(height: 9),
+      const Text('Οι αγαπημένες σου ♡', style: TextStyle(fontSize: 29, fontWeight: FontWeight.w900, color: ink)),
+      const SizedBox(height: 15),
+      if (list.isEmpty) ...[
+        const SizedBox(height: 80), const Center(child: Text('💗', style: TextStyle(fontSize: 54))),
+        const SizedBox(height: 12), const Center(child: Text('Δεν έχεις αποθηκεύσει ιδέες ακόμη.', style: TextStyle(color: muted))),
+        const SizedBox(height: 20), FilledButton(onPressed: () => setState(() => page = 1), child: const Text('Βρες ιδέες')),
+      ] else ...list.asMap().entries.map((e) => _ideaCard(e.value, e.key)),
+    ]);
+  }
+
+  void _details(Idea idea) => showModalBottomSheet<void>(context: context,
+    isScrollControlled: true, showDragHandle: true, backgroundColor: cream,
+    shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(30))),
+    builder: (ctx) => StatefulBuilder(builder: (ctx, localSetState) => SafeArea(
+      child: Padding(padding: EdgeInsets.fromLTRB(24, 8, 24, 20 + MediaQuery.viewInsetsOf(ctx).bottom),
+        child: SingleChildScrollView(child: Column(mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Container(height: 160, width: double.infinity, alignment: Alignment.center,
+              decoration: BoxDecoration(color: blush, borderRadius: BorderRadius.circular(24)),
+              child: Text(emojiFor(idea.location), style: const TextStyle(fontSize: 78))),
+            const SizedBox(height: 20),
+            Text(idea.transformation, style: const TextStyle(fontSize: 27, fontWeight: FontWeight.w900)),
+            const SizedBox(height: 6), Text('Από: ${idea.objectName}', style: const TextStyle(color: muted)),
+            const SizedBox(height: 16),
+            Wrap(spacing: 8, runSpacing: 8, children: [
+              _tag(styles[idea.style] ?? idea.style), _tag(occasions[idea.occasion] ?? idea.occasion, color: blush),
+              _tag(idea.difficulty == 'easy' ? 'Εύκολο' : 'Μέτριο'),
+            ]),
+            const SizedBox(height: 21),
+            const Text('Η ιδέα', style: TextStyle(fontSize: 17, fontWeight: FontWeight.w800)),
+            const SizedBox(height: 7),
+            Text('Χρησιμοποίησε το αντικείμενο ως «${idea.transformation.toLowerCase()}» για να δώσεις μια απρόσμενη πινελιά στο look σου.'),
+            const SizedBox(height: 15),
+            if (idea.extras) const Text('Μπορεί να χρειαστούν επιπλέον υλικά για σταθερή εφαρμογή.', style: TextStyle(color: muted)),
+            const SizedBox(height: 14),
+            const Text('Σημείωση ασφαλείας', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w800)),
+            const SizedBox(height: 7), Text(idea.notes, style: const TextStyle(color: muted)),
+            const SizedBox(height: 24),
+            SizedBox(width: double.infinity, child: FilledButton.icon(
+              onPressed: () { setState(() { if (!saved.add(idea.id)) saved.remove(idea.id); }); localSetState(() {}); },
+              icon: Icon(saved.contains(idea.id) ? Icons.favorite_rounded : Icons.favorite_border_rounded),
+              label: Text(saved.contains(idea.id) ? 'Αποθηκεύτηκε · Πάτα για αφαίρεση' : 'Αποθήκευσε την ιδέα'))),
+          ]))))));
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'PhishGuard GR',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: kBg,
-        colorScheme: const ColorScheme.dark(primary: kAccent, surface: kCard),
-      ),
-      home: const MainScreen(),
-    );
-  }
-}
-
-class MainScreen extends StatefulWidget {
-  const MainScreen({super.key});
-
-  @override
-  State<MainScreen> createState() => _MainScreenState();
-}
-
-class _MainScreenState extends State<MainScreen> {
-  int _currentIndex = 0;
-  final _inputController = TextEditingController();
-  final _reportController = TextEditingController();
-
-  final List<ScanResult> _history = [];
-  int _totalChecks = 12450; // demo βάση
-  int _totalScams = 8910; // demo βάση
-
-  static const _samples = {
-    'elta':
-        'ΕΛΤΑ: Το δέμα σας GR9823120 δεν επιδόθηκε λόγω λάθος διεύθυνσης. Παρακαλώ ενημερώστε τα στοιχεία σας εδώ: http://elta-post-verify.com/pay',
-    'bank':
-        'ΕΥΡΩΒΑΝΚ: Ο λογαριασμός σας έχει ανασταλεί προσωρινά. Πατήστε στον σύνδεσμο για ενεργοποίηση: https://eurobank-secure-login.net',
-    'safe': 'Το ραντεβού σας με τον γιατρό είναι προγραμματισμένο για αύριο στις 10:00 πμ.',
-  };
-
-  // Demo δεδομένα Dashboard
-  static const _targets = [
-    ('ΕΛΤΑ / Courier', 42),
-    ('Τράπεζες', 27),
-    ('ΔΕΗ / ΕΥΔΑΠ', 14),
-    ('Viva / Wolt / efood', 9),
-    ('Άλλα', 8),
-  ];
-
-  @override
-  void dispose() {
-    _inputController.dispose();
-    _reportController.dispose();
-    super.dispose();
-  }
-
-  void _toast(String msg, {bool error = false}) {
-    ScaffoldMessenger.of(context)
-      ..hideCurrentSnackBar()
-      ..showSnackBar(SnackBar(
-        content: Text(msg, style: const TextStyle(color: Colors.black, fontWeight: FontWeight.w600)),
-        backgroundColor: error ? kRed : const Color(0xFFCDD6F4),
-        behavior: SnackBarBehavior.floating,
-        duration: const Duration(seconds: 2),
-      ));
-  }
-
-  void _analyzeText() {
-    final text = _inputController.text.trim();
-    if (text.isEmpty) {
-      _toast('Εισάγετε κείμενο ή σύνδεσμο για έλεγχο.', error: true);
-      return;
-    }
-    final res = computeScore(text);
-    setState(() {
-      _history.insert(0, res);
-      if (_history.length > 3) _history.removeLast();
-      _totalChecks++;
-      if (res.score >= 30) _totalScams++;
-    });
-    _showResult(res);
-  }
-
-  void _submitReport() {
-    if (_reportController.text.trim().isEmpty) {
-      _toast('Γράψτε ή επικολλήστε το ύποπτο μήνυμα πρώτα.', error: true);
-      return;
-    }
-    _reportController.clear();
-    FocusScope.of(context).unfocus();
-    setState(() => _currentIndex = 0);
-    _toast('Η αναφορά στάλθηκε. Ευχαριστούμε!');
-  }
-
-  void _showResult(ScanResult r) {
-    final tier = tierOf(r.score);
-    showModalBottomSheet(
-      context: context,
-      isScrollControlled: true,
-      backgroundColor: kCard,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
-      ),
-      builder: (ctx) => SafeArea(
-        child: SingleChildScrollView(
-          padding: const EdgeInsets.all(20),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                width: double.infinity,
-                padding: const EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  color: tier.color.withAlpha(35),
-                  border: Border.all(color: tier.color),
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: Column(
-                  children: [
-                    Text('ΠΙΘΑΝΟΤΗΤΑ ΑΠΑΤΗΣ',
-                        style: TextStyle(color: tier.color, fontSize: 12, letterSpacing: 1)),
-                    Text('${r.score}%',
-                        style: TextStyle(color: tier.color, fontSize: 38, fontWeight: FontWeight.w800)),
-                    Text(tier.label,
-                        style: TextStyle(color: tier.color, fontWeight: FontWeight.bold)),
-                    const SizedBox(height: 10),
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(3),
-                      child: LinearProgressIndicator(
-                        value: r.score / 100,
-                        minHeight: 6,
-                        color: tier.color,
-                        backgroundColor: Colors.white24,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(height: 16),
-              const Text('🤖 Αιτιολογία Predictive Model',
-                  style: TextStyle(fontWeight: FontWeight.bold)),
-              const SizedBox(height: 8),
-              for (final reason in r.reasons)
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 6),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(reason.bad ? '🚩 ' : '✅ '),
-                      Expanded(
-                        child: Text(reason.text, style: const TextStyle(color: Colors.white70)),
-                      ),
-                    ],
-                  ),
-                ),
-              const Text('Rule-based scoring: κάθε κανόνας προσθέτει βάρος στο σκορ (0-98%).',
-                  style: TextStyle(color: Colors.white38, fontSize: 11, fontStyle: FontStyle.italic)),
-              const SizedBox(height: 16),
-              const Text('💡 Συνιστώμενες Ενέργειες', style: TextStyle(fontWeight: FontWeight.bold)),
-              const SizedBox(height: 8),
-              for (int i = 0; i < tier.advice.length; i++)
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 4),
-                  child: Text('${i + 1}. ${tier.advice[i]}',
-                      style: const TextStyle(color: Colors.white70)),
-                ),
-              const SizedBox(height: 16),
-              SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
-                  onPressed: () => Navigator.pop(ctx),
-                  style: ElevatedButton.styleFrom(backgroundColor: kAccent),
-                  child: const Text('Κλείσιμο', style: TextStyle(color: Colors.black)),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-
-  // ---------- UI helpers ----------
-  Widget _card(String title, Widget child) {
-    return Card(
-      color: kCard,
-      margin: const EdgeInsets.only(bottom: 14),
-      child: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
-            const SizedBox(height: 10),
-            child,
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget _note(String text) => Padding(
-        padding: const EdgeInsets.only(top: 8),
-        child: Text(text,
-            style: const TextStyle(color: Colors.white38, fontSize: 11, fontStyle: FontStyle.italic)),
-      );
-
-  String _fmt(int n) => n
-      .toString()
-      .replaceAllMapped(RegExp(r'(\d)(?=(\d{3})+$)'), (m) => '${m[1]},');
-
-  // ---------- Οθόνες ----------
-  Widget _buildCheck() {
-    return ListView(
-      padding: const EdgeInsets.all(16),
-      children: [
-        _card(
-          '🔍 Έλεγχος Μηνύματος / Link',
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              TextField(
-                controller: _inputController,
-                maxLines: 3,
-                decoration: const InputDecoration(
-                  hintText: 'Επικολλήστε εδώ ύποπτο SMS, Email ή URL...',
-                  border: OutlineInputBorder(),
-                ),
-              ),
-              const SizedBox(height: 10),
-              Wrap(
-                spacing: 8,
-                children: [
-                  ActionChip(
-                    label: const Text('⚠️ SMS ΕΛΤΑ'),
-                    onPressed: () => _inputController.text = _samples['elta']!,
-                  ),
-                  ActionChip(
-                    label: const Text('⚠️ SMS Τράπεζας'),
-                    onPressed: () => _inputController.text = _samples['bank']!,
-                  ),
-                  ActionChip(
-                    label: const Text('✅ Ασφαλές'),
-                    onPressed: () => _inputController.text = _samples['safe']!,
-                  ),
-                ],
-              ),
-              const SizedBox(height: 14),
-              SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
-                  onPressed: _analyzeText,
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: kAccent,
-                    padding: const EdgeInsets.symmetric(vertical: 14),
-                  ),
-                  child: const Text('Ανάλυση Επικινδυνότητας',
-                      style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
-                ),
-              ),
-            ],
-          ),
-        ),
-        _card(
-          '🕘 Ιστορικό Ελέγχων',
-          _history.isEmpty
-              ? const Text('Δεν υπάρχουν έλεγχοι ακόμα. Δοκιμάστε ένα δείγμα παραπάνω.',
-                  style: TextStyle(color: Colors.white70))
-              : Column(
-                  children: [
-                    for (final h in _history)
-                      InkWell(
-                        onTap: () => _showResult(h),
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 8),
-                          child: Row(
-                            children: [
-                              Container(
-                                width: 52,
-                                padding: const EdgeInsets.symmetric(vertical: 4),
-                                decoration: BoxDecoration(
-                                  color: tierOf(h.score).color.withAlpha(40),
-                                  borderRadius: BorderRadius.circular(6),
-                                ),
-                                alignment: Alignment.center,
-                                child: Text('${h.score}%',
-                                    style: TextStyle(
-                                        color: tierOf(h.score).color, fontWeight: FontWeight.bold)),
-                              ),
-                              const SizedBox(width: 10),
-                              Expanded(
-                                child: Text(h.text,
-                                    maxLines: 1,
-                                    overflow: TextOverflow.ellipsis,
-                                    style: const TextStyle(color: Colors.white70, fontSize: 13)),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                  ],
-                ),
-        ),
-        _card(
-          '📢 Τελευταίες Απάτες στην Ελλάδα',
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Text(
-                '• Fake SMS από "ELTA Post" για εκκρεμές δέμα.\n• Ψεύτικη ειδοποίηση "Eurobank: Κλειδώθηκε ο λογαριασμός".',
-                style: TextStyle(color: Colors.white70, height: 1.5),
-              ),
-              _note('Παραδείγματα για επίδειξη (demo δεδομένα).'),
-            ],
-          ),
-        ),
-      ],
-    );
-  }
-
-  Widget _buildReport() {
-    return ListView(
-      padding: const EdgeInsets.all(16),
-      children: [
-        _card(
-          '📣 Αναφορά Νέας Απάτης',
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Text('Βοηθήστε την κοινότητα αναφέροντας νέες τακτικές απάτης.',
-                  style: TextStyle(color: Colors.white70)),
-              const SizedBox(height: 10),
-              TextField(
-                controller: _reportController,
-                maxLines: 4,
-                decoration: const InputDecoration(
-                  hintText: 'Επικολλήστε το ύποπτο κείμενο ή τον αριθμό αποστολέα...',
-                  border: OutlineInputBorder(),
-                ),
-              ),
-              const SizedBox(height: 12),
-              SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
-                  onPressed: _submitReport,
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: kAccent,
-                    padding: const EdgeInsets.symmetric(vertical: 14),
-                  ),
-                  child: const Text('Υποβολή Αναφοράς',
-                      style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
-                ),
-              ),
-              _note(
-                  'Στην πλήρη εφαρμογή οι αναφορές θα ελέγχονται και θα τροφοδοτούν τη λίστα γνωστών απατών. Στο mockup δεν αποθηκεύονται πουθενά.'),
-            ],
-          ),
-        ),
-      ],
-    );
-  }
-
-  Widget _stat(String value, String label) {
-    return Expanded(
-      child: Container(
-        padding: const EdgeInsets.all(12),
-        decoration: BoxDecoration(color: kBar, borderRadius: BorderRadius.circular(10)),
-        child: Column(
-          children: [
-            Text(value,
-                style: const TextStyle(color: kAccent, fontSize: 20, fontWeight: FontWeight.bold)),
-            const SizedBox(height: 2),
-            Text(label, style: const TextStyle(color: Colors.white54, fontSize: 11)),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget _buildStats() {
-    return ListView(
-      padding: const EdgeInsets.all(16),
-      children: [
-        _card(
-          '📊 Στατιστικά Κοινότητας',
-          Row(
-            children: [
-              _stat(_fmt(_totalChecks), 'Συνολικοί έλεγχοι'),
-              const SizedBox(width: 10),
-              _stat(_fmt(_totalScams), 'Αναγνωρισμένες απάτες'),
-            ],
-          ),
-        ),
-        _card(
-          '🎯 Πιο Συχνοί Στόχοι Απάτης',
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              for (final t in _targets)
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 10),
-                  child: Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(t.$1, style: const TextStyle(color: Colors.white70, fontSize: 13)),
-                          Text('${t.$2}%',
-                              style: const TextStyle(color: Colors.white70, fontSize: 13)),
-                        ],
-                      ),
-                      const SizedBox(height: 4),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(5),
-                        child: Stack(
-                          children: [
-                            Container(height: 10, color: kBar),
-                            TweenAnimationBuilder<double>(
-                              tween: Tween(begin: 0, end: t.$2 / 42),
-                              duration: const Duration(milliseconds: 700),
-                              builder: (context, v, _) => FractionallySizedBox(
-                                widthFactor: v,
-                                child: Container(height: 10, color: kAccent),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              _note(
-                  'Τα στατιστικά είναι demo δεδομένα και δεν προέρχονται από πραγματική έρευνα. Οι έλεγχοι που κάνετε εδώ προστίθενται στα σύνολα.'),
-            ],
-          ),
-        ),
-      ],
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('🛡️ PhishGuard GR'),
-        centerTitle: true,
-        backgroundColor: kBar,
-      ),
-      body: IndexedStack(
-        index: _currentIndex,
-        children: [_buildCheck(), _buildReport(), _buildStats()],
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _currentIndex,
-        onTap: (i) => setState(() => _currentIndex = i),
-        backgroundColor: kBar,
-        selectedItemColor: kAccent,
-        unselectedItemColor: Colors.white54,
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Έλεγχος'),
-          BottomNavigationBarItem(icon: Icon(Icons.campaign), label: 'Αναφορά'),
-          BottomNavigationBarItem(icon: Icon(Icons.bar_chart), label: 'Stats'),
-        ],
-      ),
-    );
-  }
+  Widget build(BuildContext context) => Scaffold(
+    body: SafeArea(child: Center(child: ConstrainedBox(constraints: const BoxConstraints(maxWidth: 520),
+      child: Column(children: [
+        _topBar(back: page != 0),
+        Expanded(child: loading ? const Center(child: CircularProgressIndicator()) :
+          ideas.isEmpty ? const Center(child: Text('Δεν βρέθηκαν δεδομένα. Έλεγξε το assets/data/recommendations.json.')) :
+          switch (page) {
+            0 => _welcome(), 1 => _objectPage(), 2 => _preferences(),
+            3 => _results(), 4 => _savedPage(), _ => _welcome(),
+          }),
+      ])))),
+    bottomNavigationBar: page == 0 || page == 4 ? null : SafeArea(
+      top: false, child: Padding(padding: const EdgeInsets.fromLTRB(24, 5, 24, 9),
+        child: Row(children: List.generate(3, (i) => Expanded(child: Container(
+          margin: const EdgeInsets.symmetric(horizontal: 3), height: 5,
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(6),
+            color: i <= page - 1 ? plum : const Color(0xFFE8DAE3))))))),
+    ),
+  );
 }
