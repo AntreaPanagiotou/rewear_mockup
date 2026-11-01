@@ -1,3 +1,13 @@
+// ReWear the Unexpected — run on Windows / VS Code (PowerShell):
+// 1. Open the FULL Flutter project folder (the one containing pubspec.yaml).
+// 2. Run these commands in its Terminal:
+//    C:\src\flutter\bin\flutter.bat pub get
+//    C:\src\flutter\bin\flutter.bat run -d edge
+// 3. For phone preview in Edge: F12, then Ctrl+Shift+M.
+// 4. While running: press r for hot reload, R for hot restart.
+// Note: Plain `flutter` isn't recognized on this computer (PATH issue).
+// If your Flutter SDK is installed elsewhere, replace C:\src\flutter accordingly.
+
 import 'dart:convert';
 import 'dart:math';
 import 'package:flutter/material.dart';
@@ -8,18 +18,90 @@ void main() => runApp(const ReWearApp());
 const ink = Color(0xFF262127);
 const muted = Color(0xFF786E77);
 const plum = Color(0xFF6D3E59);
+const line = Color(0xFFEDE3E6);
 const blush = Color(0xFFFFE7E9);
 const cream = Color(0xFFFFF9F4);
 const lavender = Color(0xFFEAE4F4);
 
+const uiLabels = <String, List<String>>{
+  'ui.infoTitle': ["Τι είναι το ReWear;", "What is ReWear?"],
+  'ui.infoIntro': ["Μεταμόρφωσε αντικείμενα που ήδη έχεις σε απρόσμενα αξεσουάρ. Διάλεξε αντικείμενο, περίσταση και στυλ και ανακάλυψε ιδέες!", "Turn objects you already own into unexpected accessories. Choose an object, occasion and style to discover new ideas."],
+  'ui.infoDisclaimer': ["Αυτή είναι μια διαδραστική προεπισκόπηση (HW1). Οι προτάσεις προέρχονται από συνθετικό dataset. Δεν υπάρχει ακόμη εκπαιδευμένο recommender ή αυτόματη αναγνώριση εικόνας.", "This is an interactive HW1 mockup. Suggestions come from a synthetic dataset; no trained recommendation model or image recognition is implemented."],
+  'ui.ok': ["Κατάλαβα!", "Got it"],
+  'ui.savedTooltip': ["Αποθηκευμένα", "Saved"],
+  'ui.infoTooltip': ["Πληροφορίες", "About"],
+  'ui.heroTag': ["REIMAGINE THE EVERYDAY", "REIMAGINE THE EVERYDAY"],
+  'ui.heroTitle': ["Ordinary things.\nA new point of view.", "Ordinary things.\nA new point of view."],
+  'ui.heroSub': ["Μικρές μεταμορφώσεις, μεγάλη φαντασία.\nΔες τα αντικείμενά σου αλλιώς.", "Small transformations, big imagination.\nSee your everyday objects differently."],
+  'ui.discover': ["Ανακάλυψε ιδέες", "Discover ideas"],
+  'ui.random': ["Επίλεξε τυχαίο αντικείμενο", "Surprise me with an object"],
+  'ui.step1': ["01  /  ΕΠΙΛΟΓΗ ΑΝΤΙΚΕΙΜΕΝΟΥ", "01  /  CHOOSE AN OBJECT"],
+  'ui.pickTitle': ["Τι έχεις διαθέσιμο;", "What do you have?"],
+  'ui.pickSub': ["Διάλεξε ένα συνηθισμένο αντικείμενο για μια ασυνήθιστη ιδέα.", "Choose an ordinary object for an unexpected look."],
+  'ui.search': ["Αναζήτησε αντικείμενο…", "Search objects…"],
+  'ui.noObject': ["Δεν βρέθηκε αντικείμενο.", "No objects found."],
+  'ui.step2': ["02  /  ΠΡΟΣΑΡΜΟΓΗ", "02  /  PERSONALIZE"],
+  'ui.customTitle': ["Στα μέτρα σου.", "Make it yours."],
+  'ui.customSub': ["Επίλεξε πού θα πας και τι διάθεση έχεις σήμερα.", "Pick your occasion and mood for today."],
+  'ui.yourObject': ["ΤΟ ΑΝΤΙΚΕΙΜΕΝΟ ΣΟΥ", "YOUR OBJECT"],
+  'ui.change': ["Αλλαγή", "Change"],
+  'ui.occasionQuestion': ["Ποια είναι η περίσταση;", "What’s the occasion?"],
+  'ui.styleQuestion': ["Ποιο είναι το στυλ σου;", "What’s your style?"],
+  'ui.showIdeas': ["Δείξε μου ιδέες", "Show ideas"],
+  'ui.both': ["Ιδανικό για την περίσταση και το στυλ σου", "Matches your occasion and style"],
+  'ui.occasionMatch': ["Ταιριάζει στην περίσταση", "Matches your occasion"],
+  'ui.styleMatch': ["Ταιριάζει στο στυλ", "Matches your style"],
+  'ui.alternative': ["Εναλλακτική ιδέα για σένα", "An alternative idea for you"],
+  'ui.saveTooltip': ["Αποθήκευση", "Save idea"],
+  'ui.idea': ["ΙΔΕΑ", "IDEA"],
+  'ui.step3': ["03  /  ΟΙ ΠΡΟΤΑΣΕΙΣ ΣΟΥ", "03  /  YOUR IDEAS"],
+  'ui.resultsTitle': ["Your rewear edit.", "Your rewear edit."],
+  'ui.resultsNote': ["Οι προτάσεις κατατάσσονται ενδεικτικά βάσει των επιλογών σου.", "Ideas are ranked using simple preference matching."],
+  'ui.adjust': ["Άλλαξε περίσταση / στυλ", "Change occasion / style"],
+  'ui.another': ["Δοκίμασε άλλο αντικείμενο", "Try another object"],
+  'ui.collection': ["ΣΥΛΛΟΓΗ", "COLLECTION"],
+  'ui.favorites': ["Οι αγαπημένες σου.", "Your favorites."],
+  'ui.noSaved': ["Δεν έχεις αποθηκεύσει ιδέες ακόμη.", "You haven’t saved any ideas yet."],
+  'ui.findIdeas': ["Βρες ιδέες", "Explore ideas"],
+  'ui.from': ["Από:", "From:"],
+  'ui.easy': ["Εύκολο", "Easy"],
+  'ui.medium': ["Μέτριο", "Medium"],
+  'ui.how': ["Πώς να το φορέσεις", "How to style it"],
+  'ui.extras': ["Μπορεί να χρειαστούν επιπλέον υλικά για σταθερή εφαρμογή.", "Extra materials may be needed to secure it."],
+  'ui.safety': ["Σημείωση ασφαλείας", "Safety note"],
+  'ui.saved': ["Αποθηκεύτηκε · Πάτα για αφαίρεση", "Saved · Tap to remove"],
+  'ui.save': ["Αποθήκευσε την ιδέα", "Save this idea"],
+  'ui.dataError': ["Δεν βρέθηκαν δεδομένα. Έλεγξε το assets/data/recommendations.json.", "No data found. Check assets/data/recommendations.json."],
+  'ui.anyOcc': ["Οποιαδήποτε", "Any occasion"],
+  'ui.everyday': ["Καθημερινά", "Everyday"],
+  'ui.outing': ["Βόλτα", "Going out"],
+  'ui.party': ["Πάρτι", "Party"],
+  'ui.festival': ["Φεστιβάλ", "Festival"],
+  'ui.beach': ["Παραλία", "Beach"],
+  'ui.summer': ["Καλοκαίρι", "Summer"],
+  'ui.winter': ["Χειμώνας", "Winter"],
+  'ui.travel': ["Ταξίδι", "Travel"],
+  'ui.home': ["Σπίτι", "At home"],
+  'ui.anyStyle': ["Έκπληξέ με", "Surprise me"],
+  'ui.hair': ["Μαλλιά", "Hair"],
+  'ui.hat': ["Κεφάλι", "Hat"],
+  'ui.bag': ["Τσάντα", "Bag"],
+  'ui.wrist': ["Καρπός", "Wrist"],
+  'ui.neck': ["Λαιμός", "Neck"],
+  'ui.shoulders': ["Ώμοι", "Shoulders"],
+  'ui.waist': ["Μέση", "Waist"],
+};
+
 class Idea {
   final String id, objectId, objectName, material, size, transformation;
   final String location, occasion, style, difficulty, notes;
+  final String objectNameEn, transformationEn, notesEn;
   final bool extras;
   const Idea({required this.id, required this.objectId, required this.objectName,
     required this.material, required this.size, required this.transformation,
     required this.location, required this.occasion, required this.style,
-    required this.difficulty, required this.notes, required this.extras});
+    required this.difficulty, required this.notes, required this.extras,
+    required this.objectNameEn, required this.transformationEn, required this.notesEn});
   factory Idea.fromJson(Map<String, dynamic> j) => Idea(
     id: '${j['recommendation_id'] ?? ''}', objectId: '${j['object_id'] ?? ''}',
     objectName: '${j['object_name_el'] ?? ''}', material: '${j['object_material'] ?? ''}',
@@ -27,6 +109,9 @@ class Idea {
     location: '${j['wear_location'] ?? ''}', occasion: '${j['occasion'] ?? ''}',
     style: '${j['style'] ?? ''}', difficulty: '${j['difficulty'] ?? ''}',
     notes: '${j['safety_notes_el'] ?? ''}',
+    objectNameEn: '${j['object_name_en'] ?? j['object_name_el'] ?? ''}',
+    transformationEn: '${j['transformation_en'] ?? j['transformation_el'] ?? ''}',
+    notesEn: '${j['safety_notes_en'] ?? j['safety_notes_el'] ?? ''}',
     extras: '${j['requires_extra_material'] ?? ''}'.toLowerCase() == 'yes');
 }
 
@@ -47,10 +132,17 @@ const locations = <String, String>{
   'neck': 'Λαιμός', 'shoulders': 'Ώμοι', 'waist': 'Μέση',
 };
 
-String emojiFor(String location) => switch (location) {
-  'hair' => '🎀', 'hat' => '👒', 'bag' => '👜', 'wrist' => '🪡',
-  'neck' => '🧣', 'shoulders' => '🧥', 'waist' => '✨', _ => '🌷',
+IconData iconFor(String location) => switch (location) {
+  'hair' => Icons.auto_awesome_outlined,
+  'hat' => Icons.checkroom_outlined,
+  'bag' => Icons.shopping_bag_outlined,
+  'wrist' => Icons.watch_outlined,
+  'neck' => Icons.dry_cleaning_outlined,
+  'shoulders' => Icons.checkroom_outlined,
+  'waist' => Icons.style_outlined,
+  _ => Icons.auto_awesome_outlined,
 };
+
 
 class ReWearApp extends StatelessWidget {
   const ReWearApp({super.key});
@@ -61,9 +153,9 @@ class ReWearApp extends StatelessWidget {
       useMaterial3: true, scaffoldBackgroundColor: cream,
       colorScheme: ColorScheme.fromSeed(seedColor: plum, primary: plum, surface: cream),
       textTheme: const TextTheme(
-        headlineLarge: TextStyle(fontWeight: FontWeight.w900, letterSpacing: -1.3, color: ink),
-        headlineMedium: TextStyle(fontWeight: FontWeight.w800, color: ink),
-        titleLarge: TextStyle(fontWeight: FontWeight.w800, color: ink),
+        headlineLarge: TextStyle(fontWeight: FontWeight.w700, letterSpacing: -0.8, color: ink),
+        headlineMedium: TextStyle(fontWeight: FontWeight.w700, color: ink),
+        titleLarge: TextStyle(fontWeight: FontWeight.w700, color: ink),
         titleMedium: TextStyle(fontWeight: FontWeight.w700, color: ink),
         bodyMedium: TextStyle(color: ink, height: 1.45),
       ),
@@ -86,6 +178,14 @@ class ReWearHome extends StatefulWidget {
 }
 
 class _ReWearHomeState extends State<ReWearHome> {
+  String appLanguage = 'el';
+  String tr(String key) => appLanguage == 'en' ? (uiLabels[key]?[1] ?? key) : (uiLabels[key]?[0] ?? key);
+  String objectLabel(Idea i) => appLanguage == 'en' ? i.objectNameEn : i.objectName;
+  String ideaLabel(Idea i) => appLanguage == 'en' ? i.transformationEn : i.transformation;
+  String safetyLabel(Idea i) => appLanguage == 'en' ? i.notesEn : i.notes;
+  String occasionLabel(String k) => tr('ui.${k == 'any' ? 'anyOcc' : k}');
+  String styleLabel(String k) => k == 'any' ? tr('ui.anyStyle') : (styles[k] ?? k);
+  String locationLabel(String k) => tr('ui.$k');
   List<Idea> ideas = [];
   bool loading = true;
   int page = 0; // 0 welcome, 1 object, 2 preferences, 3 results, 4 saved
@@ -111,12 +211,12 @@ class _ReWearHomeState extends State<ReWearHome> {
     } catch (e) {
       if (!mounted) return;
       setState(() => loading = false);
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Δεν φορτώθηκαν οι προτάσεις: $e')));
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(appLanguage == 'en' ? 'Could not load ideas: $e' : 'Δεν φορτώθηκαν οι προτάσεις: $e')));
     }
   }
 
   Map<String, String> get objects => {
-    for (final i in ideas) i.objectId: i.objectName,
+    for (final i in ideas) i.objectId: objectLabel(i),
   };
 
   List<Idea> get ranked {
@@ -138,26 +238,44 @@ class _ReWearHomeState extends State<ReWearHome> {
     shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(28))),
     builder: (ctx) => SafeArea(child: Padding(padding: const EdgeInsets.fromLTRB(26, 12, 26, 32),
       child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
-        const Text('🌸  Τι είναι το ReWear;', style: TextStyle(fontSize: 25, fontWeight: FontWeight.w900)),
+        Text(tr('ui.infoTitle'), style: TextStyle(fontSize: 25, fontWeight: FontWeight.w700)),
         const SizedBox(height: 14),
-        const Text('Μεταμόρφωσε αντικείμενα που ήδη έχεις σε απρόσμενα αξεσουάρ. Διάλεξε αντικείμενο, περίσταση και στυλ και ανακάλυψε ιδέες!'),
+        Text(tr('ui.infoIntro')),
         const SizedBox(height: 12),
-        const Text('Αυτή είναι μια διαδραστική προεπισκόπηση (HW1). Οι προτάσεις προέρχονται από συνθετικό dataset. Δεν υπάρχει ακόμη εκπαιδευμένο recommender ή αυτόματη αναγνώριση εικόνας.', style: TextStyle(color: muted)),
+        Text(tr('ui.infoDisclaimer'), style: TextStyle(color: muted)),
         const SizedBox(height: 18),
-        SizedBox(width: double.infinity, child: FilledButton(onPressed: () => Navigator.pop(ctx), child: const Text('Κατάλαβα!'))),
+        SizedBox(width: double.infinity, child: FilledButton(onPressed: () => Navigator.pop(ctx), child: Text(tr('ui.ok')))),
       ]))),
+  );
+
+  Widget _languageSwitch() => Container(
+    padding: const EdgeInsets.all(3),
+    decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(19), border: Border.all(color: line)),
+    child: Row(mainAxisSize: MainAxisSize.min, children: ['el', 'en'].map((language) {
+      final active = appLanguage == language;
+      return InkWell(
+        borderRadius: BorderRadius.circular(15),
+        onTap: () => setState(() => appLanguage = language),
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 6),
+          decoration: BoxDecoration(color: active ? blush : Colors.transparent, borderRadius: BorderRadius.circular(15)),
+          child: Text(language.toUpperCase(), style: TextStyle(fontSize: 11, color: active ? plum : muted, fontWeight: active ? FontWeight.w700 : FontWeight.w500)),
+        ),
+      );
+    }).toList()),
   );
 
   Widget _topBar({bool back = false}) => Padding(
     padding: const EdgeInsets.fromLTRB(22, 14, 22, 12),
     child: Row(children: [
       if (back) IconButton(onPressed: () => setState(() => page = page == 4 ? 0 : page - 1), icon: const Icon(Icons.arrow_back_ios_new_rounded))
-      else const Text('✳', style: TextStyle(fontSize: 28, color: plum)),
+      else const Icon(Icons.auto_awesome_rounded, size: 25, color: plum),
       const SizedBox(width: 7),
-      const Expanded(child: Text('rewear.', style: TextStyle(fontSize: 24, letterSpacing: -1, fontWeight: FontWeight.w900, color: ink))),
-      IconButton(tooltip: 'Αποθηκευμένα', onPressed: () => setState(() => page = 4), icon: Badge(
-        isLabelVisible: saved.isNotEmpty, label: Text('${saved.length}'), child: const Icon(Icons.favorite_border_rounded))),
-      IconButton(tooltip: 'Πληροφορίες', onPressed: _info, icon: const Icon(Icons.info_outline_rounded)),
+      const Expanded(child: Text('rewear.', style: TextStyle(fontSize: 24, letterSpacing: -1, fontWeight: FontWeight.w700, color: ink))),
+      _languageSwitch(),
+      const SizedBox(width: 3),
+      IconButton(tooltip: tr('ui.savedTooltip'), onPressed: () => setState(() => page = 4), icon: Icon(saved.isNotEmpty ? Icons.favorite_rounded : Icons.favorite_border_rounded, size: 23)),
+      IconButton(tooltip: tr('ui.infoTooltip'), onPressed: _info, icon: const Icon(Icons.info_outline_rounded)),
     ]),
   );
 
@@ -167,47 +285,63 @@ class _ReWearHomeState extends State<ReWearHome> {
     child: Text(text, style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 12, color: ink)),
   );
 
-  Widget _welcome() => ListView(padding: const EdgeInsets.fromLTRB(24, 18, 24, 28), children: [
-    const SizedBox(height: 30),
-    _tag('STYLE WHAT YOU ALREADY OWN', color: blush),
+  Widget _welcome() => ListView(padding: const EdgeInsets.fromLTRB(26, 12, 26, 32), children: [
+    const SizedBox(height: 24),
+    Align(alignment: Alignment.centerLeft, child: _tag('REIMAGINE THE EVERYDAY', color: blush)),
     const SizedBox(height: 22),
-    const Text('Ordinary objects.\nExtraordinary style.', style: TextStyle(
-      fontSize: 43, height: 1.07, letterSpacing: -2, fontWeight: FontWeight.w900, color: ink)),
-    const SizedBox(height: 15),
-    const Text('Δώσε μια δεύτερη ζωή σε καθημερινά αντικείμενα.\nΗ πιο δημιουργική ντουλάπα είναι ήδη γύρω σου.',
-      style: TextStyle(fontSize: 15, color: muted, height: 1.6)),
-    const SizedBox(height: 32),
-    Container(height: 230, decoration: BoxDecoration(
-      gradient: const LinearGradient(colors: [Color(0xFFF9D6D8), Color(0xFFE7DCF1)]),
-      borderRadius: BorderRadius.circular(32)),
-      child: const Stack(alignment: Alignment.center, children: [
-        Positioned(left: 18, top: 24, child: Text('✿', style: TextStyle(fontSize: 60, color: Colors.white))),
-        Text('🧣  ➜  🎀', style: TextStyle(fontSize: 56)),
-        Positioned(right: 17, bottom: 22, child: Text('make it yours ↗', style: TextStyle(fontWeight: FontWeight.w700, color: plum))),
+    Text(tr('ui.heroTitle'), style: TextStyle(
+      fontSize: 39, height: 1.12, letterSpacing: -1.4, fontWeight: FontWeight.w700, color: ink)),
+    const SizedBox(height: 18),
+    Text(tr('ui.heroSub'),
+      style: TextStyle(fontSize: 15, color: muted, height: 1.65)),
+    const SizedBox(height: 30),
+    Container(height: 244, decoration: BoxDecoration(
+      gradient: const LinearGradient(begin: Alignment.topLeft, end: Alignment.bottomRight,
+        colors: [Color(0xFFFFECEC), Color(0xFFEAE4F4)]),
+      borderRadius: BorderRadius.circular(30)),
+      child: Stack(children: [
+        Positioned(top: 23, left: 22, child: Text('THE REWEAR EDIT',
+          style: TextStyle(fontSize: 11, letterSpacing: 2, color: Color(0xBF6D3E59), fontWeight: FontWeight.w700))),
+        Positioned(left: 28, bottom: 35, child: Transform.rotate(angle: -0.12,
+          child: Container(width: 119, height: 126, decoration: BoxDecoration(color: Colors.white,
+            borderRadius: BorderRadius.circular(23), boxShadow: const [BoxShadow(color: Color(0x126D3E59), blurRadius: 15)]),
+            child: const Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+              Icon(Icons.dry_cleaning_outlined, color: plum, size: 51), SizedBox(height: 9),
+              Text('BEFORE', style: TextStyle(fontSize: 10, letterSpacing: 1.5, color: muted))])))),
+        const Center(child: Icon(Icons.arrow_forward_rounded, color: plum, size: 31)),
+        Positioned(right: 24, top: 65, child: Transform.rotate(angle: 0.10,
+          child: Container(width: 119, height: 126, decoration: BoxDecoration(color: plum,
+            borderRadius: BorderRadius.circular(23), boxShadow: const [BoxShadow(color: Color(0x186D3E59), blurRadius: 15)]),
+            child: const Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+              Icon(Icons.auto_awesome_outlined, color: Colors.white, size: 51), SizedBox(height: 9),
+              Text('AFTER', style: TextStyle(fontSize: 10, letterSpacing: 1.5, color: Colors.white))])))),
+        const Positioned(right: 24, bottom: 15, child: Text('made to be remade',
+          style: TextStyle(fontSize: 11, fontStyle: FontStyle.italic, color: plum))),
       ])),
-    const SizedBox(height: 28),
+    const SizedBox(height: 32),
     SizedBox(width: double.infinity, child: FilledButton.icon(
-      onPressed: () => setState(() => page = 1), icon: const Icon(Icons.auto_awesome_rounded), label: const Text('Βρες την επόμενη ιδέα σου'))),
-    const SizedBox(height: 10),
-    Center(child: TextButton.icon(onPressed: _randomObject, icon: const Icon(Icons.shuffle_rounded), label: const Text('Έκπληξέ με με ένα αντικείμενο'))),
+      onPressed: () => setState(() => page = 1), icon: const Icon(Icons.arrow_forward_rounded),
+      label: Text(tr('ui.discover')))),
+    const SizedBox(height: 8),
+    Center(child: TextButton.icon(onPressed: _randomObject,
+      icon: const Icon(Icons.shuffle_rounded, size: 18), label: Text(tr('ui.random')))),
     const SizedBox(height: 14),
-    Text('${objects.length} αντικείμενα  ·  ${ideas.length} δημιουργικές ιδέες',
-      textAlign: TextAlign.center, style: const TextStyle(color: muted, fontSize: 12)),
+    
   ]);
 
   Widget _objectPage() {
     final filtered = objects.entries.where((e) => e.value.toLowerCase().contains(search.trim().toLowerCase())).toList();
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      const Padding(padding: EdgeInsets.fromLTRB(24, 16, 24, 8), child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Text('ΒΗΜΑ 01 / 03', style: TextStyle(color: plum, fontWeight: FontWeight.w800, letterSpacing: 1.5, fontSize: 12)),
-        SizedBox(height: 9), Text('Τι έχεις διαθέσιμο;', style: TextStyle(fontSize: 30, fontWeight: FontWeight.w900, color: ink)),
-        SizedBox(height: 8), Text('Διάλεξε ένα συνηθισμένο αντικείμενο για μια ασυνήθιστη ιδέα.', style: TextStyle(color: muted)),
+      Padding(padding: const EdgeInsets.fromLTRB(24, 16, 24, 8), child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Text(tr('ui.step1'), style: TextStyle(color: plum, fontWeight: FontWeight.w700, letterSpacing: 1.5, fontSize: 12)),
+        SizedBox(height: 9), Text(tr('ui.pickTitle'), style: TextStyle(fontSize: 30, fontWeight: FontWeight.w700, color: ink)),
+        SizedBox(height: 8), Text(tr('ui.pickSub'), style: TextStyle(color: muted)),
       ])),
       Padding(padding: const EdgeInsets.fromLTRB(24, 15, 24, 10), child: TextField(
         onChanged: (v) => setState(() => search = v),
-        decoration: const InputDecoration(prefixIcon: Icon(Icons.search), hintText: 'Αναζήτησε αντικείμενο…'),
+        decoration: InputDecoration(prefixIcon: const Icon(Icons.search), hintText: tr('ui.search')),
       )),
-      Expanded(child: filtered.isEmpty ? const Center(child: Text('Δεν βρέθηκε αντικείμενο.')) :
+      Expanded(child: filtered.isEmpty ? Center(child: Text(tr('ui.noObject'))) :
         GridView.builder(padding: const EdgeInsets.fromLTRB(24, 8, 24, 24),
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, childAspectRatio: 1.04, crossAxisSpacing: 13, mainAxisSpacing: 13),
           itemCount: filtered.length, itemBuilder: (ctx, index) {
@@ -216,10 +350,10 @@ class _ReWearHomeState extends State<ReWearHome> {
             return InkWell(borderRadius: BorderRadius.circular(24),
               onTap: () => setState(() { chosenObject = e.key; page = 2; }),
               child: Container(padding: const EdgeInsets.all(14), decoration: BoxDecoration(
-                color: index.isEven ? blush : lavender, borderRadius: BorderRadius.circular(24)),
+                color: index.isEven ? blush : lavender, borderRadius: BorderRadius.circular(22), border: Border.all(color: Colors.white, width: 1.5)),
                 child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                  Text(emojiFor(sample.location), style: const TextStyle(fontSize: 39)),
-                  Text(e.value, maxLines: 2, overflow: TextOverflow.ellipsis, style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 15, color: ink)),
+                  Icon(iconFor(sample.location), color: plum, size: 35),
+                  Text(e.value, maxLines: 2, overflow: TextOverflow.ellipsis, style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 15, color: ink)),
                   const Align(alignment: Alignment.centerRight, child: Icon(Icons.arrow_outward_rounded, color: plum, size: 19)),
                 ])),
             );
@@ -229,10 +363,10 @@ class _ReWearHomeState extends State<ReWearHome> {
 
   Widget _choiceGroup(String heading, Map<String, String> options, String selected, ValueChanged<String> change) => Column(
     crossAxisAlignment: CrossAxisAlignment.start, children: [
-      Text(heading, style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w800)),
+      Text(heading, style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w700)),
       const SizedBox(height: 13),
       Wrap(spacing: 9, runSpacing: 9, children: options.entries.map((e) => ChoiceChip(
-        label: Text(e.value), selected: selected == e.key, onSelected: (_) => change(e.key),
+        label: Text(identical(options, occasions) ? occasionLabel(e.key) : styleLabel(e.key)), selected: selected == e.key, onSelected: (_) => change(e.key),
         selectedColor: blush, backgroundColor: Colors.white,
         side: BorderSide(color: selected == e.key ? plum : const Color(0xFFEFE8E8)),
         labelStyle: TextStyle(color: selected == e.key ? plum : ink, fontWeight: FontWeight.w700),
@@ -240,52 +374,52 @@ class _ReWearHomeState extends State<ReWearHome> {
     ]);
 
   Widget _preferences() => ListView(padding: const EdgeInsets.fromLTRB(24, 16, 24, 30), children: [
-    const Text('ΒΗΜΑ 02 / 03', style: TextStyle(color: plum, fontWeight: FontWeight.w800, letterSpacing: 1.5, fontSize: 12)),
+    Text(tr('ui.step2'), style: TextStyle(color: plum, fontWeight: FontWeight.w700, letterSpacing: 1.5, fontSize: 12)),
     const SizedBox(height: 9),
-    const Text('Κάν’ το δικό σου.', style: TextStyle(fontSize: 31, fontWeight: FontWeight.w900, color: ink)),
+    Text(tr('ui.customTitle'), style: TextStyle(fontSize: 29, fontWeight: FontWeight.w700, color: ink)),
     const SizedBox(height: 8),
-    const Text('Επίλεξε πού θα πας και τι διάθεση έχεις σήμερα.', style: TextStyle(color: muted)),
+    Text(tr('ui.customSub'), style: TextStyle(color: muted)),
     const SizedBox(height: 23),
     Container(padding: const EdgeInsets.all(17), decoration: BoxDecoration(color: lavender, borderRadius: BorderRadius.circular(20)),
-      child: Row(children: [const Text('🎁', style: TextStyle(fontSize: 32)), const SizedBox(width: 15),
+      child: Row(children: [const Icon(Icons.inventory_2_outlined, size: 30, color: plum), const SizedBox(width: 15),
         Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          const Text('ΤΟ ΑΝΤΙΚΕΙΜΕΝΟ ΣΟΥ', style: TextStyle(fontSize: 10, color: muted, fontWeight: FontWeight.bold)),
-          Text(objects[chosenObject] ?? '', style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w800))])),
-        TextButton(onPressed: () => setState(() => page = 1), child: const Text('Αλλαγή'))])),
+          Text(tr('ui.yourObject'), style: TextStyle(fontSize: 10, color: muted, fontWeight: FontWeight.bold)),
+          Text(objects[chosenObject] ?? '', style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w700))])),
+        TextButton(onPressed: () => setState(() => page = 1), child: Text(tr('ui.change')))])),
     const SizedBox(height: 28),
-    _choiceGroup('Ποια είναι η περίσταση;', occasions, occasion, (v) => setState(() => occasion = v)),
+    _choiceGroup(tr('ui.occasionQuestion'), occasions, occasion, (v) => setState(() => occasion = v)),
     const SizedBox(height: 27),
-    _choiceGroup('Ποιο είναι το στυλ σου;', styles, style, (v) => setState(() => style = v)),
+    _choiceGroup(tr('ui.styleQuestion'), styles, style, (v) => setState(() => style = v)),
     const SizedBox(height: 30),
     FilledButton.icon(onPressed: () => setState(() => page = 3),
-      icon: const Icon(Icons.auto_awesome_rounded), label: const Text('Δείξε μου ιδέες')),
+      icon: const Icon(Icons.auto_awesome_rounded), label: Text(tr('ui.showIdeas'))),
   ]);
 
   Widget _ideaCard(Idea idea, int rank) {
     final exactOccasion = occasion != 'any' && occasion == idea.occasion;
     final exactStyle = style != 'any' && style == idea.style;
-    final match = exactOccasion && exactStyle ? 'Ταιριάζει σε περίσταση & στυλ' :
-      exactOccasion ? 'Ταιριάζει στην περίσταση' : exactStyle ? 'Ταιριάζει στο στυλ' : 'Εναλλακτική ιδέα για σένα';
+    final match = exactOccasion && exactStyle ? tr('ui.both') :
+      exactOccasion ? tr('ui.occasionMatch') : exactStyle ? tr('ui.styleMatch') : tr('ui.alternative');
     return Container(margin: const EdgeInsets.only(bottom: 14), decoration: BoxDecoration(
-      borderRadius: BorderRadius.circular(26), color: Colors.white,
-      boxShadow: const [BoxShadow(color: Color(0x0D6D3E59), blurRadius: 14, offset: Offset(0, 5))]),
-      child: InkWell(borderRadius: BorderRadius.circular(26), onTap: () => _details(idea),
+      borderRadius: BorderRadius.circular(23), color: Colors.white, border: Border.all(color: line),
+      boxShadow: const [BoxShadow(color: Color(0x086D3E59), blurRadius: 10, offset: Offset(0, 3))]),
+      child: InkWell(borderRadius: BorderRadius.circular(23), onTap: () => _details(idea),
         child: Padding(padding: const EdgeInsets.all(16), child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Container(width: 81, height: 103, alignment: Alignment.center,
             decoration: BoxDecoration(color: rank.isEven ? blush : lavender, borderRadius: BorderRadius.circular(18)),
-            child: Text(emojiFor(idea.location), style: const TextStyle(fontSize: 38))),
+            child: Icon(iconFor(idea.location), color: plum, size: 37)),
           const SizedBox(width: 14),
           Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Text('IDEA #${rank + 1}', style: const TextStyle(fontSize: 10, letterSpacing: 1, fontWeight: FontWeight.w900, color: plum)),
+            Text('${tr('ui.idea')} #${rank + 1}', style: const TextStyle(fontSize: 10, letterSpacing: 1, fontWeight: FontWeight.w700, color: plum)),
             const SizedBox(height: 5),
-            Text(idea.transformation, style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w900, color: ink)),
+            Text(ideaLabel(idea), style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: ink)),
             const SizedBox(height: 8),
             Text(match, style: const TextStyle(fontSize: 12, color: muted)),
             const SizedBox(height: 7),
-            Text('${locations[idea.location] ?? idea.location} · ${styles[idea.style] ?? idea.style}',
+            Text('${locationLabel(idea.location)} · ${styleLabel(idea.style)}',
               style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: plum)),
           ])),
-          IconButton(tooltip: 'Αποθήκευση', constraints: const BoxConstraints(), padding: EdgeInsets.zero,
+          IconButton(tooltip: tr('ui.saveTooltip'), constraints: const BoxConstraints(), padding: EdgeInsets.zero,
             onPressed: () => setState(() { if (!saved.add(idea.id)) saved.remove(idea.id); }),
             icon: Icon(saved.contains(idea.id) ? Icons.favorite_rounded : Icons.favorite_border_rounded,
               color: saved.contains(idea.id) ? plum : muted)),
@@ -296,34 +430,35 @@ class _ReWearHomeState extends State<ReWearHome> {
   Widget _results() {
     final results = ranked;
     return ListView(padding: const EdgeInsets.fromLTRB(24, 16, 24, 28), children: [
-      const Text('ΒΗΜΑ 03 / 03', style: TextStyle(color: plum, fontWeight: FontWeight.w800, letterSpacing: 1.5, fontSize: 12)),
+      Text(tr('ui.step3'), style: TextStyle(color: plum, fontWeight: FontWeight.w700, letterSpacing: 1.5, fontSize: 12)),
       const SizedBox(height: 9),
-      const Text('Your rewear edit ✨', style: TextStyle(fontSize: 31, fontWeight: FontWeight.w900, color: ink)),
+      Text(tr('ui.resultsTitle'), style: TextStyle(fontSize: 29, fontWeight: FontWeight.w700, color: ink)),
       const SizedBox(height: 8),
-      Text('Βρήκαμε ${results.length} ιδέες για: ${objects[chosenObject] ?? ''}', style: const TextStyle(color: muted)),
+      Text(appLanguage == 'en' ? 'Found ${results.length} ideas for: ${objects[chosenObject] ?? ''}' : 'Βρήκαμε ${results.length} ιδέες για: ${objects[chosenObject] ?? ''}', style: const TextStyle(color: muted)),
       const SizedBox(height: 13),
-      const Text('Οι προτάσεις κατατάσσονται ενδεικτικά βάσει των επιλογών σου.',
+      Text(tr('ui.resultsNote'),
         style: TextStyle(color: muted, fontSize: 12)),
       const SizedBox(height: 20),
       ...results.asMap().entries.map((e) => _ideaCard(e.value, e.key)),
       const SizedBox(height: 12),
       OutlinedButton.icon(onPressed: () => setState(() => page = 2),
-        icon: const Icon(Icons.tune_rounded), label: const Text('Άλλαξε περίσταση / στυλ')),
-      TextButton(onPressed: () => setState(() { page = 1; search = ''; }), child: const Text('Δοκίμασε άλλο αντικείμενο')),
+        icon: const Icon(Icons.tune_rounded), label: Text(tr('ui.adjust'))),
+      TextButton(onPressed: () => setState(() { page = 1; search = ''; }), child: Text(tr('ui.another'))),
     ]);
   }
 
   Widget _savedPage() {
     final list = ideas.where((e) => saved.contains(e.id)).toList();
     return ListView(padding: const EdgeInsets.fromLTRB(24, 16, 24, 28), children: [
-      const Text('ΣΥΛΛΟΓΗ', style: TextStyle(color: plum, fontWeight: FontWeight.w800, letterSpacing: 1.5, fontSize: 12)),
+      Text(tr('ui.collection'), style: TextStyle(color: plum, fontWeight: FontWeight.w700, letterSpacing: 1.5, fontSize: 12)),
       const SizedBox(height: 9),
-      const Text('Οι αγαπημένες σου ♡', style: TextStyle(fontSize: 29, fontWeight: FontWeight.w900, color: ink)),
+      Text(tr('ui.favorites'), style: TextStyle(fontSize: 29, fontWeight: FontWeight.w700, color: ink)),
       const SizedBox(height: 15),
       if (list.isEmpty) ...[
-        const SizedBox(height: 80), const Center(child: Text('💗', style: TextStyle(fontSize: 54))),
-        const SizedBox(height: 12), const Center(child: Text('Δεν έχεις αποθηκεύσει ιδέες ακόμη.', style: TextStyle(color: muted))),
-        const SizedBox(height: 20), FilledButton(onPressed: () => setState(() => page = 1), child: const Text('Βρες ιδέες')),
+        const SizedBox(height: 80),
+        Center(child: Container(width: 84, height: 84, decoration: const BoxDecoration(color: blush, shape: BoxShape.circle), child: const Icon(Icons.favorite_border_rounded, size: 34, color: plum))),
+        const SizedBox(height: 18), Center(child: Text(tr('ui.noSaved'), textAlign: TextAlign.center, style: const TextStyle(color: muted))),
+        const SizedBox(height: 20), FilledButton(onPressed: () => setState(() => page = 1), child: Text(tr('ui.findIdeas'))),
       ] else ...list.asMap().entries.map((e) => _ideaCard(e.value, e.key)),
     ]);
   }
@@ -337,29 +472,29 @@ class _ReWearHomeState extends State<ReWearHome> {
           crossAxisAlignment: CrossAxisAlignment.start, children: [
             Container(height: 160, width: double.infinity, alignment: Alignment.center,
               decoration: BoxDecoration(color: blush, borderRadius: BorderRadius.circular(24)),
-              child: Text(emojiFor(idea.location), style: const TextStyle(fontSize: 78))),
+              child: Icon(iconFor(idea.location), color: plum, size: 76)),
             const SizedBox(height: 20),
-            Text(idea.transformation, style: const TextStyle(fontSize: 27, fontWeight: FontWeight.w900)),
-            const SizedBox(height: 6), Text('Από: ${idea.objectName}', style: const TextStyle(color: muted)),
+            Text(ideaLabel(idea), style: const TextStyle(fontSize: 27, fontWeight: FontWeight.w700)),
+            const SizedBox(height: 6), Text('${tr('ui.from')} ${objectLabel(idea)}', style: const TextStyle(color: muted)),
             const SizedBox(height: 16),
             Wrap(spacing: 8, runSpacing: 8, children: [
-              _tag(styles[idea.style] ?? idea.style), _tag(occasions[idea.occasion] ?? idea.occasion, color: blush),
-              _tag(idea.difficulty == 'easy' ? 'Εύκολο' : 'Μέτριο'),
+              _tag(styleLabel(idea.style)), _tag(occasionLabel(idea.occasion), color: blush),
+              _tag(idea.difficulty == 'easy' ? tr('ui.easy') : tr('ui.medium')),
             ]),
             const SizedBox(height: 21),
-            const Text('Η ιδέα', style: TextStyle(fontSize: 17, fontWeight: FontWeight.w800)),
+            Text(tr('ui.how'), style: TextStyle(fontSize: 17, fontWeight: FontWeight.w700)),
             const SizedBox(height: 7),
-            Text('Χρησιμοποίησε το αντικείμενο ως «${idea.transformation.toLowerCase()}» για να δώσεις μια απρόσμενη πινελιά στο look σου.'),
+            Text(appLanguage == 'en' ? 'Style your object as “${ideaLabel(idea)}” to give your look a fresh twist.' : 'Χρησιμοποίησε το αντικείμενο ως «${ideaLabel(idea).toLowerCase()}» για να δώσεις μια απρόσμενη πινελιά στο look σου.'),
             const SizedBox(height: 15),
-            if (idea.extras) const Text('Μπορεί να χρειαστούν επιπλέον υλικά για σταθερή εφαρμογή.', style: TextStyle(color: muted)),
+            if (idea.extras) Text(tr('ui.extras'), style: TextStyle(color: muted)),
             const SizedBox(height: 14),
-            const Text('Σημείωση ασφαλείας', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w800)),
-            const SizedBox(height: 7), Text(idea.notes, style: const TextStyle(color: muted)),
+            Text(tr('ui.safety'), style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700)),
+            const SizedBox(height: 7), Text(safetyLabel(idea), style: const TextStyle(color: muted)),
             const SizedBox(height: 24),
             SizedBox(width: double.infinity, child: FilledButton.icon(
               onPressed: () { setState(() { if (!saved.add(idea.id)) saved.remove(idea.id); }); localSetState(() {}); },
               icon: Icon(saved.contains(idea.id) ? Icons.favorite_rounded : Icons.favorite_border_rounded),
-              label: Text(saved.contains(idea.id) ? 'Αποθηκεύτηκε · Πάτα για αφαίρεση' : 'Αποθήκευσε την ιδέα'))),
+              label: Text(saved.contains(idea.id) ? tr('ui.saved') : tr('ui.save')))),
           ]))))));
 
   @override
@@ -368,7 +503,7 @@ class _ReWearHomeState extends State<ReWearHome> {
       child: Column(children: [
         _topBar(back: page != 0),
         Expanded(child: loading ? const Center(child: CircularProgressIndicator()) :
-          ideas.isEmpty ? const Center(child: Text('Δεν βρέθηκαν δεδομένα. Έλεγξε το assets/data/recommendations.json.')) :
+          ideas.isEmpty ? Center(child: Text(tr('ui.dataError'))) :
           switch (page) {
             0 => _welcome(), 1 => _objectPage(), 2 => _preferences(),
             3 => _results(), 4 => _savedPage(), _ => _welcome(),
