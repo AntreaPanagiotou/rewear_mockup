@@ -16,7 +16,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Bath towel",
     "transformation_en": "Hair turban",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed.",
+    "category": "towels",
+    "technique": "turban",
+    "time_minutes": 5,
+    "steps_el": [
+      "Σκύψε μπροστά και άπλωσε το ύφασμα στον αυχένα, με τις άκρες προς τα εμπρός.",
+      "Στρίψε τις δύο άκρες μεταξύ τους πάνω από το μέτωπο μέχρι να γίνουν «σχοινί».",
+      "Φέρε το στριφτό κομμάτι προς τα πίσω πάνω από το κεφάλι.",
+      "Χώσε την άκρη κάτω από το ύφασμα στον αυχένα ώστε να μείνει σταθερό."
+    ],
+    "steps_en": [
+      "Lean forward and lay the fabric over the nape, ends pointing forward.",
+      "Twist the two ends together above your forehead until they form a rope.",
+      "Bring the twisted part back over the top of your head.",
+      "Tuck the end under the fabric at the nape so it stays in place."
+    ]
   },
   {
     "recommendation_id": "RW0002",
@@ -35,7 +50,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Bath towel",
     "transformation_en": "Light shoulder wrap",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "towels",
+    "technique": "shoulder_wrap",
+    "time_minutes": 3,
+    "steps_el": [
+      "Άπλωσε το ύφασμα και δίπλωσέ το στη μέση κατά μήκος.",
+      "Ρίξ' το πάνω από τους ώμους σαν σάλι, με το κέντρο στην πλάτη.",
+      "Φέρε τις άκρες μπροστά και δέσε τες σε έναν χαλαρό κόμπο ή στερέωσέ τες με καρφίτσα.",
+      "Φτιάξε τις πτυχές ώστε να πέφτει ομοιόμορφα."
+    ],
+    "steps_en": [
+      "Lay the fabric flat and fold it in half lengthwise.",
+      "Drape it over your shoulders like a shawl, centred on your back.",
+      "Bring the ends forward and tie a loose knot or fasten with a pin.",
+      "Adjust the folds so it falls evenly."
+    ]
   },
   {
     "recommendation_id": "RW0003",
@@ -54,7 +84,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Bath towel",
     "transformation_en": "Securely tied beach skirt",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Wear over normal clothing, not as a standalone garment."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Wear over normal clothing, not as a standalone garment.",
+    "category": "towels",
+    "technique": "waist_wrap",
+    "time_minutes": 10,
+    "steps_el": [
+      "Τύλιξε το ύφασμα γύρω από τη μέση, πάνω από μαγιό ή ρούχο.",
+      "Φέρε τις δύο άκρες στο πλάι του γοφού.",
+      "Δέσε διπλό κόμπο και άφησε τις άκρες να κρέμονται.",
+      "Έλεγξε ότι κάθεται σταθερά όταν περπατάς."
+    ],
+    "steps_en": [
+      "Wrap the fabric around your waist, over swimwear or clothing.",
+      "Bring both ends to the side of your hip.",
+      "Tie a double knot and let the ends hang.",
+      "Check it stays secure while you walk."
+    ]
   },
   {
     "recommendation_id": "RW0004",
@@ -73,7 +118,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Hand towel",
     "transformation_en": "Hair bandana",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed.",
+    "category": "towels",
+    "technique": "bandana",
+    "time_minutes": 3,
+    "steps_el": [
+      "Δίπλωσε το ύφασμα διαγώνια σε τρίγωνο.",
+      "Δίπλωσε τη μακριά πλευρά 2–3 φορές για λωρίδα (ή άφησέ το τρίγωνο).",
+      "Τοποθέτησέ το στο κεφάλι με τις άκρες προς τον αυχένα.",
+      "Δέσε τις άκρες σε κόμπο κάτω από τα μαλλιά."
+    ],
+    "steps_en": [
+      "Fold the fabric diagonally into a triangle.",
+      "Fold the long edge 2–3 times into a band (or keep the triangle).",
+      "Place it on your head with the ends toward the nape.",
+      "Tie the ends in a knot under your hair."
+    ]
   },
   {
     "recommendation_id": "RW0005",
@@ -92,7 +152,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Hand towel",
     "transformation_en": "Fabric wrist cuff",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "towels",
+    "technique": "wrist_cuff",
+    "time_minutes": 5,
+    "steps_el": [
+      "Κόψε ή δίπλωσε λωρίδα 5–8 εκ. πλάτος, αρκετά μακριά για τον καρπό.",
+      "Τύλιξέ τη γύρω από τον καρπό ή πάνω από το μανίκι.",
+      "Δέσε μικρό κόμπο ή στερέωσε με κουμπί/velcro.",
+      "Βεβαιώσου ότι χωράει ένα δάχτυλο από κάτω."
+    ],
+    "steps_en": [
+      "Cut or fold a 5–8 cm strip long enough for your wrist.",
+      "Wrap it around your wrist or over your sleeve.",
+      "Tie a small knot or secure with a button/velcro.",
+      "Make sure one finger fits underneath."
+    ]
   },
   {
     "recommendation_id": "RW0006",
@@ -111,7 +186,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Hand towel",
     "transformation_en": "Small neck scarf",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep the knot loose and avoid constriction."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep the knot loose and avoid constriction.",
+    "category": "towels",
+    "technique": "neck_scarf",
+    "time_minutes": 8,
+    "steps_el": [
+      "Δίπλωσε το ύφασμα διαγώνια σε τρίγωνο ή σε λωρίδα.",
+      "Τύλιξέ το χαλαρά γύρω από τον λαιμό.",
+      "Δέσε μικρό κόμπο στο πλάι ή μπροστά.",
+      "Γύρισε τον κόμπο ελαφρώς στο πλάι για πιο retro εφέ."
+    ],
+    "steps_en": [
+      "Fold the fabric diagonally into a triangle or a band.",
+      "Wrap it loosely around your neck.",
+      "Tie a small knot at the side or front.",
+      "Turn the knot slightly to the side for a retro feel."
+    ]
   },
   {
     "recommendation_id": "RW0007",
@@ -130,7 +220,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Cloth napkin",
     "transformation_en": "Knotted hairband",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed.",
+    "category": "kitchen",
+    "technique": "hairband",
+    "time_minutes": 3,
+    "steps_el": [
+      "Δίπλωσε ή κόψε το ύφασμα σε λωρίδα 5–8 εκ.",
+      "Πέρασέ το κάτω από τα μαλλιά στον αυχένα.",
+      "Φέρε τις άκρες πάνω από το κεφάλι.",
+      "Δέσε κόμπο στην κορυφή ή στο πλάι και φτιάξε τις άκρες."
+    ],
+    "steps_en": [
+      "Fold or cut the fabric into a 5–8 cm strip.",
+      "Pass it under your hair at the nape.",
+      "Bring the ends up over your head.",
+      "Tie a knot on top or at the side and arrange the ends."
+    ]
   },
   {
     "recommendation_id": "RW0008",
@@ -149,7 +254,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Cloth napkin",
     "transformation_en": "Neck kerchief",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep the knot loose and avoid constriction."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep the knot loose and avoid constriction.",
+    "category": "kitchen",
+    "technique": "neck_scarf",
+    "time_minutes": 3,
+    "steps_el": [
+      "Δίπλωσε το ύφασμα διαγώνια σε τρίγωνο ή σε λωρίδα.",
+      "Τύλιξέ το χαλαρά γύρω από τον λαιμό.",
+      "Δέσε μικρό κόμπο στο πλάι ή μπροστά.",
+      "Γύρισε τον κόμπο ελαφρώς στο πλάι για πιο retro εφέ."
+    ],
+    "steps_en": [
+      "Fold the fabric diagonally into a triangle or a band.",
+      "Wrap it loosely around your neck.",
+      "Tie a small knot at the side or front.",
+      "Turn the knot slightly to the side for a retro feel."
+    ]
   },
   {
     "recommendation_id": "RW0009",
@@ -168,7 +288,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Cloth napkin",
     "transformation_en": "Bag strap decoration",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily.",
+    "category": "kitchen",
+    "technique": "handle_wrap",
+    "time_minutes": 13,
+    "steps_el": [
+      "Στερέωσε τη μία άκρη στη βάση του χερουλιού με κόμπο.",
+      "Τύλιξε σπειροειδώς γύρω από το χερούλι, λίγο πάνω από το προηγούμενο γύρισμα.",
+      "Συνέχισε μέχρι το σημείο που θες.",
+      "Δέσε την άκρη και κρύψε την κάτω από το τύλιγμα."
+    ],
+    "steps_en": [
+      "Secure one end at the base of the handle with a knot.",
+      "Wrap in a spiral around the handle, slightly overlapping each turn.",
+      "Continue as far as you like.",
+      "Tie off the end and tuck it under the wrap."
+    ]
   },
   {
     "recommendation_id": "RW0010",
@@ -187,7 +322,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Wide fabric gift ribbon",
     "transformation_en": "Hair bow",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed.",
+    "category": "cords",
+    "technique": "hair_bow",
+    "time_minutes": 4,
+    "steps_el": [
+      "Κόψε ή δίπλωσε μια λωρίδα περίπου 40–60 εκ.",
+      "Μάζεψε τα μαλλιά σε αλογοουρά ή μισή αλογοουρά με λαστιχάκι.",
+      "Τύλιξε τη λωρίδα πάνω από το λαστιχάκι.",
+      "Δέσε φιόγκο και ίσιωσε τα «αυτιά» ώστε να είναι ίδια."
+    ],
+    "steps_en": [
+      "Cut or fold a strip about 40–60 cm long.",
+      "Gather your hair into a ponytail or half-up with an elastic.",
+      "Wrap the strip over the elastic.",
+      "Tie a bow and even out the loops."
+    ]
   },
   {
     "recommendation_id": "RW0011",
@@ -206,7 +356,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Wide fabric gift ribbon",
     "transformation_en": "Bag ribbon",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily.",
+    "category": "cords",
+    "technique": "bag_bow",
+    "time_minutes": 4,
+    "steps_el": [
+      "Δίπλωσε το κομμάτι σε λωρίδα περίπου 5 εκ.",
+      "Τύλιξέ το μία φορά γύρω από τη βάση του χερουλιού.",
+      "Δέσε φιόγκο και ίσιωσε τα «αυτιά».",
+      "Κόψε λοξά τις άκρες για πιο καθαρό αποτέλεσμα."
+    ],
+    "steps_en": [
+      "Fold the piece into a strip about 5 cm wide.",
+      "Wrap it once around the base of the handle.",
+      "Tie a bow and even out the loops.",
+      "Trim the ends at an angle for a cleaner finish."
+    ]
   },
   {
     "recommendation_id": "RW0012",
@@ -225,7 +390,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Wide fabric gift ribbon",
     "transformation_en": "Wrist decoration",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "cords",
+    "technique": "wrist_cuff",
+    "time_minutes": 10,
+    "steps_el": [
+      "Κόψε ή δίπλωσε λωρίδα 5–8 εκ. πλάτος, αρκετά μακριά για τον καρπό.",
+      "Τύλιξέ τη γύρω από τον καρπό ή πάνω από το μανίκι.",
+      "Δέσε μικρό κόμπο ή στερέωσε με κουμπί/velcro.",
+      "Βεβαιώσου ότι χωράει ένα δάχτυλο από κάτω."
+    ],
+    "steps_en": [
+      "Cut or fold a 5–8 cm strip long enough for your wrist.",
+      "Wrap it around your wrist or over your sleeve.",
+      "Tie a small knot or secure with a button/velcro.",
+      "Make sure one finger fits underneath."
+    ]
   },
   {
     "recommendation_id": "RW0013",
@@ -244,7 +424,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Cotton fabric scrap",
     "transformation_en": "Hairband",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed.",
+    "category": "scraps",
+    "technique": "hairband",
+    "time_minutes": 3,
+    "steps_el": [
+      "Δίπλωσε ή κόψε το ύφασμα σε λωρίδα 5–8 εκ.",
+      "Πέρασέ το κάτω από τα μαλλιά στον αυχένα.",
+      "Φέρε τις άκρες πάνω από το κεφάλι.",
+      "Δέσε κόμπο στην κορυφή ή στο πλάι και φτιάξε τις άκρες."
+    ],
+    "steps_en": [
+      "Fold or cut the fabric into a 5–8 cm strip.",
+      "Pass it under your hair at the nape.",
+      "Bring the ends up over your head.",
+      "Tie a knot on top or at the side and arrange the ends."
+    ]
   },
   {
     "recommendation_id": "RW0014",
@@ -263,7 +458,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Cotton fabric scrap",
     "transformation_en": "Bag accessory",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily.",
+    "category": "scraps",
+    "technique": "bag_charm",
+    "time_minutes": 5,
+    "steps_el": [
+      "Μάζεψε ή δίπλωσε το κομμάτι σε μικρό σχήμα.",
+      "Δέσε στη μία άκρη ένα κορδονάκι ή κλειδοκρίκο.",
+      "Πέρασέ το στο χερούλι ή στο φερμουάρ της τσάντας.",
+      "Σφίξε καλά τον κόμπο ώστε να μη φύγει."
+    ],
+    "steps_en": [
+      "Gather or fold the piece into a small shape.",
+      "Tie a short cord or key ring to one end.",
+      "Hook it onto the bag handle or zipper.",
+      "Tighten the knot so it cannot fall off."
+    ]
   },
   {
     "recommendation_id": "RW0015",
@@ -282,7 +492,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Cotton fabric scrap",
     "transformation_en": "Hat wrap",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "scraps",
+    "technique": "hat_band",
+    "time_minutes": 10,
+    "steps_el": [
+      "Μέτρησε την περίμετρο του καπέλου πάνω από το γείσο και άφησε 20 εκ. για δέσιμο.",
+      "Τύλιξε το κομμάτι γύρω από τη βάση του καπέλου.",
+      "Δέσε κόμπο ή φιόγκο στο πλάι.",
+      "Στερέωσε με 1–2 βελονιές ή καρφίτσες για να μη γλιστρά."
+    ],
+    "steps_en": [
+      "Measure around the hat above the brim and add 20 cm for tying.",
+      "Wrap the piece around the base of the crown.",
+      "Tie a knot or bow at the side.",
+      "Secure with 1–2 stitches or pins so it does not slip."
+    ]
   },
   {
     "recommendation_id": "RW0016",
@@ -301,7 +526,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Pillowcase",
     "transformation_en": "Pleated shoulder wrap",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "home",
+    "technique": "pleated_wrap",
+    "time_minutes": 5,
+    "steps_el": [
+      "Κάνε 3–4 πτυχές σαν ακορντεόν σε όλο το μήκος.",
+      "Κράτα τις πτυχές και ρίξε το ύφασμα πάνω από τους ώμους.",
+      "Δέσε ή στερέωσε τις άκρες μπροστά στο στήθος.",
+      "Άνοιξε ελαφρά τις πτυχές στην πλάτη για όγκο."
+    ],
+    "steps_en": [
+      "Make 3–4 accordion pleats along the length.",
+      "Hold the pleats and drape the fabric over your shoulders.",
+      "Tie or pin the ends in front of your chest.",
+      "Loosen the pleats on your back slightly for volume."
+    ]
   },
   {
     "recommendation_id": "RW0017",
@@ -320,7 +560,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Pillowcase",
     "transformation_en": "Hair turban",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed.",
+    "category": "home",
+    "technique": "turban",
+    "time_minutes": 5,
+    "steps_el": [
+      "Σκύψε μπροστά και άπλωσε το ύφασμα στον αυχένα, με τις άκρες προς τα εμπρός.",
+      "Στρίψε τις δύο άκρες μεταξύ τους πάνω από το μέτωπο μέχρι να γίνουν «σχοινί».",
+      "Φέρε το στριφτό κομμάτι προς τα πίσω πάνω από το κεφάλι.",
+      "Χώσε την άκρη κάτω από το ύφασμα στον αυχένα ώστε να μείνει σταθερό."
+    ],
+    "steps_en": [
+      "Lean forward and lay the fabric over the nape, ends pointing forward.",
+      "Twist the two ends together above your forehead until they form a rope.",
+      "Bring the twisted part back over the top of your head.",
+      "Tuck the end under the fabric at the nape so it stays in place."
+    ]
   },
   {
     "recommendation_id": "RW0018",
@@ -339,7 +594,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Pillowcase",
     "transformation_en": "Decorative bag cover",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily.",
+    "category": "home",
+    "technique": "bag_drape",
+    "time_minutes": 10,
+    "steps_el": [
+      "Άπλωσε το ύφασμα πάνω από τη μία πλευρά της τσάντας.",
+      "Δίπλωσε τις άκρες ώστε να ταιριάζει στο μέγεθος.",
+      "Στερέωσε στις γωνίες με παραμάνες ή κόμπους στα χερούλια.",
+      "Έλεγξε ότι το άνοιγμα της τσάντας μένει ελεύθερο."
+    ],
+    "steps_en": [
+      "Lay the fabric over one side of the bag.",
+      "Fold the edges in so it matches the bag's size.",
+      "Secure the corners with safety pins or knots on the handles.",
+      "Check that the bag opening stays clear."
+    ]
   },
   {
     "recommendation_id": "RW0019",
@@ -358,7 +628,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Cotton tote bag",
     "transformation_en": "Statement shoulder accessory",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily.",
+    "category": "clothes",
+    "technique": "statement_bag",
+    "time_minutes": 2,
+    "steps_el": [
+      "Άδειασε και ίσιωσε την tote.",
+      "Κόντυνε τα χερούλια με έναν κόμπο ώστε να κάθεται ψηλά στον ώμο.",
+      "Φόρεσέ τη χιαστί ή στον ώμο πάνω από απλό outfit.",
+      "Πρόσθεσε κονκάρδα ή κορδέλα για προσωπική πινελιά."
+    ],
+    "steps_en": [
+      "Empty and smooth out the tote.",
+      "Shorten the handles with a knot so it sits high on the shoulder.",
+      "Wear it crossbody or on the shoulder over a simple outfit.",
+      "Add a pin or ribbon for a personal touch."
+    ]
   },
   {
     "recommendation_id": "RW0020",
@@ -377,7 +662,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Cotton tote bag",
     "transformation_en": "Decorative handle knot",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily.",
+    "category": "clothes",
+    "technique": "bag_loop",
+    "time_minutes": 5,
+    "steps_el": [
+      "Κόψε ένα κομμάτι 30–40 εκ.",
+      "Δίπλωσέ το στη μέση και κάνε θηλιά.",
+      "Πέρασε τη θηλιά γύρω από το χερούλι (lark's head knot).",
+      "Δέσε κόμπους στις άκρες για διακόσμηση."
+    ],
+    "steps_en": [
+      "Cut a piece of 30–40 cm.",
+      "Fold it in half to make a loop.",
+      "Pass the loop around the handle (lark's head knot).",
+      "Knot the ends for decoration."
+    ]
   },
   {
     "recommendation_id": "RW0021",
@@ -396,7 +696,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Cotton tote bag",
     "transformation_en": "Temporary hat holder for outings",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily.",
+    "category": "clothes",
+    "technique": "hat_holder",
+    "time_minutes": 8,
+    "steps_el": [
+      "Δέσε τα δύο χερούλια της tote μεταξύ τους με χαλαρό κόμπο.",
+      "Πέρασε το γείσο του καπέλου ανάμεσα στο χερούλι και την τσάντα.",
+      "Σφίξε λίγο τον κόμπο ώστε να κρατάει το καπέλο.",
+      "Έλεγξε ότι το καπέλο δεν τσακίζει."
+    ],
+    "steps_en": [
+      "Tie the two tote handles together with a loose knot.",
+      "Slide the hat brim between the handle and the bag.",
+      "Tighten the knot slightly so it holds the hat.",
+      "Check the hat is not crushed."
+    ]
   },
   {
     "recommendation_id": "RW0022",
@@ -415,7 +730,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Clean shoelaces",
     "transformation_en": "Braided bracelet with a loose fastening",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "clothes",
+    "technique": "braided_bracelet",
+    "time_minutes": 10,
+    "steps_el": [
+      "Κόψε 3 κομμάτια περίπου 30 εκ.",
+      "Δέσε τα μαζί σε κόμπο στη μία άκρη και στερέωσέ τα με ταινία στο τραπέζι.",
+      "Πλέξε κοτσίδα μέχρι να καλύψεις την περίμετρο του καρπού.",
+      "Δέσε κόμπο στο τέλος και ένωσε τις άκρες με χαλαρό κόμπο."
+    ],
+    "steps_en": [
+      "Cut 3 pieces about 30 cm long.",
+      "Knot them together at one end and tape them to a table.",
+      "Braid until it covers your wrist circumference.",
+      "Knot the end and join both ends with a loose knot."
+    ]
   },
   {
     "recommendation_id": "RW0023",
@@ -434,7 +764,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Clean shoelaces",
     "transformation_en": "Bag handle decoration",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily.",
+    "category": "clothes",
+    "technique": "handle_wrap",
+    "time_minutes": 8,
+    "steps_el": [
+      "Στερέωσε τη μία άκρη στη βάση του χερουλιού με κόμπο.",
+      "Τύλιξε σπειροειδώς γύρω από το χερούλι, λίγο πάνω από το προηγούμενο γύρισμα.",
+      "Συνέχισε μέχρι το σημείο που θες.",
+      "Δέσε την άκρη και κρύψε την κάτω από το τύλιγμα."
+    ],
+    "steps_en": [
+      "Secure one end at the base of the handle with a knot.",
+      "Wrap in a spiral around the handle, slightly overlapping each turn.",
+      "Continue as far as you like.",
+      "Tie off the end and tuck it under the wrap."
+    ]
   },
   {
     "recommendation_id": "RW0024",
@@ -453,7 +798,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Clean shoelaces",
     "transformation_en": "Hat brim wrap",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "clothes",
+    "technique": "hat_band",
+    "time_minutes": 10,
+    "steps_el": [
+      "Μέτρησε την περίμετρο του καπέλου πάνω από το γείσο και άφησε 20 εκ. για δέσιμο.",
+      "Τύλιξε το κομμάτι γύρω από τη βάση του καπέλου.",
+      "Δέσε κόμπο ή φιόγκο στο πλάι.",
+      "Στερέωσε με 1–2 βελονιές ή καρφίτσες για να μη γλιστρά."
+    ],
+    "steps_en": [
+      "Measure around the hat above the brim and add 20 cm for tying.",
+      "Wrap the piece around the base of the crown.",
+      "Tie a knot or bow at the side.",
+      "Secure with 1–2 stitches or pins so it does not slip."
+    ]
   },
   {
     "recommendation_id": "RW0025",
@@ -472,7 +832,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Square craft fabric",
     "transformation_en": "Bandana",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed.",
+    "category": "scraps",
+    "technique": "bandana",
+    "time_minutes": 3,
+    "steps_el": [
+      "Δίπλωσε το ύφασμα διαγώνια σε τρίγωνο.",
+      "Δίπλωσε τη μακριά πλευρά 2–3 φορές για λωρίδα (ή άφησέ το τρίγωνο).",
+      "Τοποθέτησέ το στο κεφάλι με τις άκρες προς τον αυχένα.",
+      "Δέσε τις άκρες σε κόμπο κάτω από τα μαλλιά."
+    ],
+    "steps_en": [
+      "Fold the fabric diagonally into a triangle.",
+      "Fold the long edge 2–3 times into a band (or keep the triangle).",
+      "Place it on your head with the ends toward the nape.",
+      "Tie the ends in a knot under your hair."
+    ]
   },
   {
     "recommendation_id": "RW0026",
@@ -491,7 +866,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Square craft fabric",
     "transformation_en": "Neck kerchief",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep the knot loose and avoid constriction."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep the knot loose and avoid constriction.",
+    "category": "scraps",
+    "technique": "neck_scarf",
+    "time_minutes": 3,
+    "steps_el": [
+      "Δίπλωσε το ύφασμα διαγώνια σε τρίγωνο ή σε λωρίδα.",
+      "Τύλιξέ το χαλαρά γύρω από τον λαιμό.",
+      "Δέσε μικρό κόμπο στο πλάι ή μπροστά.",
+      "Γύρισε τον κόμπο ελαφρώς στο πλάι για πιο retro εφέ."
+    ],
+    "steps_en": [
+      "Fold the fabric diagonally into a triangle or a band.",
+      "Wrap it loosely around your neck.",
+      "Tie a small knot at the side or front.",
+      "Turn the knot slightly to the side for a retro feel."
+    ]
   },
   {
     "recommendation_id": "RW0027",
@@ -510,7 +900,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Square craft fabric",
     "transformation_en": "Fabric belt over clothing",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Wear over normal clothing, not as a standalone garment."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Wear over normal clothing, not as a standalone garment.",
+    "category": "scraps",
+    "technique": "belt",
+    "time_minutes": 8,
+    "steps_el": [
+      "Δίπλωσε το ύφασμα/κορδόνι σε λωρίδα περίπου 4–5 εκ. (αν είναι φαρδύ).",
+      "Πέρασέ το γύρω από τη μέση, πάνω από φόρεμα ή φαρδύ πουκάμισο.",
+      "Δέσε φιόγκο ή κόμπο στο πλάι ή μπροστά.",
+      "Τράβα ελαφρά το ρούχο πάνω από τη ζώνη για χαλαρό εφέ."
+    ],
+    "steps_en": [
+      "Fold the fabric/cord into a strip about 4–5 cm wide (if it is wide).",
+      "Pass it around your waist, over a dress or loose shirt.",
+      "Tie a bow or knot at the side or front.",
+      "Pull the garment slightly over the belt for a relaxed look."
+    ]
   },
   {
     "recommendation_id": "RW0028",
@@ -529,7 +934,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft knitting yarn",
     "transformation_en": "Braided bracelet",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "cords",
+    "technique": "braided_bracelet",
+    "time_minutes": 10,
+    "steps_el": [
+      "Κόψε 3 κομμάτια περίπου 30 εκ.",
+      "Δέσε τα μαζί σε κόμπο στη μία άκρη και στερέωσέ τα με ταινία στο τραπέζι.",
+      "Πλέξε κοτσίδα μέχρι να καλύψεις την περίμετρο του καρπού.",
+      "Δέσε κόμπο στο τέλος και ένωσε τις άκρες με χαλαρό κόμπο."
+    ],
+    "steps_en": [
+      "Cut 3 pieces about 30 cm long.",
+      "Knot them together at one end and tape them to a table.",
+      "Braid until it covers your wrist circumference.",
+      "Knot the end and join both ends with a loose knot."
+    ]
   },
   {
     "recommendation_id": "RW0029",
@@ -548,7 +968,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft knitting yarn",
     "transformation_en": "Knitted bag accessory",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily.",
+    "category": "cords",
+    "technique": "tassel",
+    "time_minutes": 10,
+    "steps_el": [
+      "Τύλιξε την κλωστή 20–30 φορές γύρω από ένα χαρτόνι 8 εκ.",
+      "Πέρασε ένα κομμάτι κλωστή από πάνω και δέσε σφιχτά.",
+      "Κόψε τις θηλιές στο κάτω μέρος.",
+      "Δέσε ξανά 1 εκ. κάτω από την κορυφή και κρέμασέ τη στην τσάντα."
+    ],
+    "steps_en": [
+      "Wrap the string 20–30 times around an 8 cm piece of card.",
+      "Thread a piece through the top and tie tightly.",
+      "Cut the loops at the bottom.",
+      "Tie again 1 cm below the top and hang it on the bag."
+    ]
   },
   {
     "recommendation_id": "RW0030",
@@ -567,7 +1002,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft knitting yarn",
     "transformation_en": "Knitted hat decoration",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "cords",
+    "technique": "hat_accent",
+    "time_minutes": 10,
+    "steps_el": [
+      "Διάλεξε το σημείο: πλάι του καπέλου ή πάνω στη λωρίδα.",
+      "Μάζεψε το κομμάτι σε μικρό σχήμα ή φιόγκο.",
+      "Στερέωσέ το με παραμάνα ή μερικές βελονιές.",
+      "Έλεγξε ότι κάθεται σταθερά όταν κουνάς το κεφάλι."
+    ],
+    "steps_en": [
+      "Choose the spot: side of the hat or on the band.",
+      "Gather the piece into a small shape or bow.",
+      "Fasten it with a safety pin or a few stitches.",
+      "Check it stays put when you move your head."
+    ]
   },
   {
     "recommendation_id": "RW0031",
@@ -586,7 +1036,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft decorative cord",
     "transformation_en": "Belt over loose clothing",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Wear over normal clothing, not as a standalone garment."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Wear over normal clothing, not as a standalone garment.",
+    "category": "cords",
+    "technique": "belt",
+    "time_minutes": 3,
+    "steps_el": [
+      "Δίπλωσε το ύφασμα/κορδόνι σε λωρίδα περίπου 4–5 εκ. (αν είναι φαρδύ).",
+      "Πέρασέ το γύρω από τη μέση, πάνω από φόρεμα ή φαρδύ πουκάμισο.",
+      "Δέσε φιόγκο ή κόμπο στο πλάι ή μπροστά.",
+      "Τράβα ελαφρά το ρούχο πάνω από τη ζώνη για χαλαρό εφέ."
+    ],
+    "steps_en": [
+      "Fold the fabric/cord into a strip about 4–5 cm wide (if it is wide).",
+      "Pass it around your waist, over a dress or loose shirt.",
+      "Tie a bow or knot at the side or front.",
+      "Pull the garment slightly over the belt for a relaxed look."
+    ]
   },
   {
     "recommendation_id": "RW0032",
@@ -605,7 +1070,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft decorative cord",
     "transformation_en": "Decorative bag knot",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily.",
+    "category": "cords",
+    "technique": "bag_loop",
+    "time_minutes": 5,
+    "steps_el": [
+      "Κόψε ένα κομμάτι 30–40 εκ.",
+      "Δίπλωσέ το στη μέση και κάνε θηλιά.",
+      "Πέρασε τη θηλιά γύρω από το χερούλι (lark's head knot).",
+      "Δέσε κόμπους στις άκρες για διακόσμηση."
+    ],
+    "steps_en": [
+      "Cut a piece of 30–40 cm.",
+      "Fold it in half to make a loop.",
+      "Pass the loop around the handle (lark's head knot).",
+      "Knot the ends for decoration."
+    ]
   },
   {
     "recommendation_id": "RW0033",
@@ -624,7 +1104,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft decorative cord",
     "transformation_en": "Decorative hat braid",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "cords",
+    "technique": "hat_braid",
+    "time_minutes": 17,
+    "steps_el": [
+      "Κόψε 3 κομμάτια λίγο μεγαλύτερα από την περίμετρο του καπέλου.",
+      "Πλέξε τα σε κοτσίδα.",
+      "Τύλιξε την κοτσίδα γύρω από τη βάση του καπέλου.",
+      "Δέσε τις άκρες στο πλάι και άφησέ τες να κρέμονται."
+    ],
+    "steps_en": [
+      "Cut 3 pieces slightly longer than the hat's circumference.",
+      "Braid them together.",
+      "Wrap the braid around the base of the crown.",
+      "Tie the ends at the side and let them hang."
+    ]
   },
   {
     "recommendation_id": "RW0034",
@@ -643,7 +1138,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Small fabric table runner",
     "transformation_en": "Light shawl",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "kitchen",
+    "technique": "shoulder_wrap",
+    "time_minutes": 3,
+    "steps_el": [
+      "Άπλωσε το ύφασμα και δίπλωσέ το στη μέση κατά μήκος.",
+      "Ρίξ' το πάνω από τους ώμους σαν σάλι, με το κέντρο στην πλάτη.",
+      "Φέρε τις άκρες μπροστά και δέσε τες σε έναν χαλαρό κόμπο ή στερέωσέ τες με καρφίτσα.",
+      "Φτιάξε τις πτυχές ώστε να πέφτει ομοιόμορφα."
+    ],
+    "steps_en": [
+      "Lay the fabric flat and fold it in half lengthwise.",
+      "Drape it over your shoulders like a shawl, centred on your back.",
+      "Bring the ends forward and tie a loose knot or fasten with a pin.",
+      "Adjust the folds so it falls evenly."
+    ]
   },
   {
     "recommendation_id": "RW0035",
@@ -662,7 +1172,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Small fabric table runner",
     "transformation_en": "Decorative waist wrap",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Wear over normal clothing, not as a standalone garment."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Wear over normal clothing, not as a standalone garment.",
+    "category": "kitchen",
+    "technique": "waist_wrap",
+    "time_minutes": 5,
+    "steps_el": [
+      "Τύλιξε το ύφασμα γύρω από τη μέση, πάνω από μαγιό ή ρούχο.",
+      "Φέρε τις δύο άκρες στο πλάι του γοφού.",
+      "Δέσε διπλό κόμπο και άφησε τις άκρες να κρέμονται.",
+      "Έλεγξε ότι κάθεται σταθερά όταν περπατάς."
+    ],
+    "steps_en": [
+      "Wrap the fabric around your waist, over swimwear or clothing.",
+      "Bring both ends to the side of your hip.",
+      "Tie a double knot and let the ends hang.",
+      "Check it stays secure while you walk."
+    ]
   },
   {
     "recommendation_id": "RW0036",
@@ -681,7 +1206,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Small fabric table runner",
     "transformation_en": "Loosely knotted scarf",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep the knot loose and avoid constriction."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep the knot loose and avoid constriction.",
+    "category": "kitchen",
+    "technique": "big_scarf",
+    "time_minutes": 8,
+    "steps_el": [
+      "Δίπλωσε το ύφασμα στη μέση κατά μήκος.",
+      "Τύλιξέ το μία φορά γύρω από τον λαιμό.",
+      "Πέρασε τις άκρες μέσα από τη θηλιά ή δέσε χαλαρό κόμπο.",
+      "Άφησε αρκετό χώρο ώστε να μη σφίγγει."
+    ],
+    "steps_en": [
+      "Fold the fabric in half lengthwise.",
+      "Wrap it once around your neck.",
+      "Pull the ends through the loop or tie a loose knot.",
+      "Leave enough room so it is not tight."
+    ]
   },
   {
     "recommendation_id": "RW0037",
@@ -700,7 +1240,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft fabric placemat",
     "transformation_en": "Folded bag accent",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily.",
+    "category": "kitchen",
+    "technique": "bag_drape",
+    "time_minutes": 5,
+    "steps_el": [
+      "Άπλωσε το ύφασμα πάνω από τη μία πλευρά της τσάντας.",
+      "Δίπλωσε τις άκρες ώστε να ταιριάζει στο μέγεθος.",
+      "Στερέωσε στις γωνίες με παραμάνες ή κόμπους στα χερούλια.",
+      "Έλεγξε ότι το άνοιγμα της τσάντας μένει ελεύθερο."
+    ],
+    "steps_en": [
+      "Lay the fabric over one side of the bag.",
+      "Fold the edges in so it matches the bag's size.",
+      "Secure the corners with safety pins or knots on the handles.",
+      "Check that the bag opening stays clear."
+    ]
   },
   {
     "recommendation_id": "RW0038",
@@ -719,7 +1274,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft fabric placemat",
     "transformation_en": "Decorative hat lining",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "kitchen",
+    "technique": "hat_lining",
+    "time_minutes": 10,
+    "steps_el": [
+      "Βάλε το καπέλο ανάποδα και μέτρησε την εσωτερική βάση.",
+      "Κόψε λωρίδα από το ύφασμα σε αυτό το μήκος.",
+      "Στερέωσέ τη στο εσωτερικό χείλος ώστε να φαίνεται λίγο από έξω.",
+      "Ράψε ή κόλλησε σε 3–4 σημεία."
+    ],
+    "steps_en": [
+      "Turn the hat over and measure the inner base.",
+      "Cut a strip of the fabric to that length.",
+      "Attach it to the inner rim so a little shows outside.",
+      "Sew or glue it at 3–4 points."
+    ]
   },
   {
     "recommendation_id": "RW0039",
@@ -738,7 +1308,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft fabric placemat",
     "transformation_en": "Fabric wrist cuff",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "kitchen",
+    "technique": "wrist_cuff",
+    "time_minutes": 10,
+    "steps_el": [
+      "Κόψε ή δίπλωσε λωρίδα 5–8 εκ. πλάτος, αρκετά μακριά για τον καρπό.",
+      "Τύλιξέ τη γύρω από τον καρπό ή πάνω από το μανίκι.",
+      "Δέσε μικρό κόμπο ή στερέωσε με κουμπί/velcro.",
+      "Βεβαιώσου ότι χωράει ένα δάχτυλο από κάτω."
+    ],
+    "steps_en": [
+      "Cut or fold a 5–8 cm strip long enough for your wrist.",
+      "Wrap it around your wrist or over your sleeve.",
+      "Tie a small knot or secure with a button/velcro.",
+      "Make sure one finger fits underneath."
+    ]
   },
   {
     "recommendation_id": "RW0040",
@@ -757,7 +1342,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Fabric coaster",
     "transformation_en": "Decorative bag patch",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily.",
+    "category": "kitchen",
+    "technique": "bag_patch",
+    "time_minutes": 15,
+    "steps_el": [
+      "Κόψε το ύφασμα στο σχήμα που θες (τετράγωνο, καρδιά, κύκλο).",
+      "Γύρισε τις άκρες προς τα μέσα ή κάνε ζιγκ-ζαγκ για να μη ξεφτίζει.",
+      "Τοποθέτησέ το στην τσάντα και στερέωσε με καρφίτσες.",
+      "Ράψε γύρω-γύρω ή κόλλησε με θερμοκολλητική ταινία."
+    ],
+    "steps_en": [
+      "Cut the fabric to the shape you like (square, heart, circle).",
+      "Fold the edges in or zig-zag them so they do not fray.",
+      "Position it on the bag and hold with pins.",
+      "Sew around it or use iron-on adhesive."
+    ]
   },
   {
     "recommendation_id": "RW0041",
@@ -776,7 +1376,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Fabric coaster",
     "transformation_en": "Small hat accent",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "kitchen",
+    "technique": "hat_accent",
+    "time_minutes": 5,
+    "steps_el": [
+      "Διάλεξε το σημείο: πλάι του καπέλου ή πάνω στη λωρίδα.",
+      "Μάζεψε το κομμάτι σε μικρό σχήμα ή φιόγκο.",
+      "Στερέωσέ το με παραμάνα ή μερικές βελονιές.",
+      "Έλεγξε ότι κάθεται σταθερά όταν κουνάς το κεφάλι."
+    ],
+    "steps_en": [
+      "Choose the spot: side of the hat or on the band.",
+      "Gather the piece into a small shape or bow.",
+      "Fasten it with a safety pin or a few stitches.",
+      "Check it stays put when you move your head."
+    ]
   },
   {
     "recommendation_id": "RW0042",
@@ -795,7 +1410,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Fabric coaster",
     "transformation_en": "Soft fabric wrist ornament",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "kitchen",
+    "technique": "wrist_ornament",
+    "time_minutes": 13,
+    "steps_el": [
+      "Κόψε το ύφασμα σε μικρό σχήμα (κύκλο, λουλούδι).",
+      "Ράψε ή κόλλησέ το πάνω σε λωρίδα ή λάστιχο καρπού.",
+      "Φόρεσέ το στον καρπό.",
+      "Έλεγξε ότι δεν σφίγγει."
+    ],
+    "steps_en": [
+      "Cut the fabric into a small shape (circle, flower).",
+      "Sew or glue it onto a strip or wrist elastic.",
+      "Slip it onto your wrist.",
+      "Check that it is not tight."
+    ]
   },
   {
     "recommendation_id": "RW0043",
@@ -814,7 +1444,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft fabric strip",
     "transformation_en": "Fabric scrunchie with elastic",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed.",
+    "category": "scraps",
+    "technique": "scrunchie",
+    "time_minutes": 15,
+    "steps_el": [
+      "Κόψε λωρίδα περίπου 50×10 εκ. και ελαστικό 20 εκ.",
+      "Δίπλωσε τη λωρίδα στη μέση κατά μήκος και ράψε την ανοιχτή πλευρά (ή κόλλα υφάσματος).",
+      "Πέρασε το ελαστικό μέσα με μια παραμάνα και δέσε τις άκρες του.",
+      "Κλείσε το άνοιγμα με μερικές βελονιές."
+    ],
+    "steps_en": [
+      "Cut a strip of about 50×10 cm and 20 cm of elastic.",
+      "Fold the strip lengthwise and sew the open side (or use fabric glue).",
+      "Thread the elastic through with a safety pin and knot its ends.",
+      "Close the gap with a few stitches."
+    ]
   },
   {
     "recommendation_id": "RW0044",
@@ -833,7 +1478,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft fabric strip",
     "transformation_en": "Small braided bag detail",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily.",
+    "category": "scraps",
+    "technique": "handle_wrap",
+    "time_minutes": 8,
+    "steps_el": [
+      "Στερέωσε τη μία άκρη στη βάση του χερουλιού με κόμπο.",
+      "Τύλιξε σπειροειδώς γύρω από το χερούλι, λίγο πάνω από το προηγούμενο γύρισμα.",
+      "Συνέχισε μέχρι το σημείο που θες.",
+      "Δέσε την άκρη και κρύψε την κάτω από το τύλιγμα."
+    ],
+    "steps_en": [
+      "Secure one end at the base of the handle with a knot.",
+      "Wrap in a spiral around the handle, slightly overlapping each turn.",
+      "Continue as far as you like.",
+      "Tie off the end and tuck it under the wrap."
+    ]
   },
   {
     "recommendation_id": "RW0045",
@@ -852,7 +1512,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft fabric strip",
     "transformation_en": "Hat ribbon",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "scraps",
+    "technique": "hat_band",
+    "time_minutes": 10,
+    "steps_el": [
+      "Μέτρησε την περίμετρο του καπέλου πάνω από το γείσο και άφησε 20 εκ. για δέσιμο.",
+      "Τύλιξε το κομμάτι γύρω από τη βάση του καπέλου.",
+      "Δέσε κόμπο ή φιόγκο στο πλάι.",
+      "Στερέωσε με 1–2 βελονιές ή καρφίτσες για να μη γλιστρά."
+    ],
+    "steps_en": [
+      "Measure around the hat above the brim and add 20 cm for tying.",
+      "Wrap the piece around the base of the crown.",
+      "Tie a knot or bow at the side.",
+      "Secure with 1–2 stitches or pins so it does not slip."
+    ]
   },
   {
     "recommendation_id": "RW0046",
@@ -871,7 +1546,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft craft lace",
     "transformation_en": "Lace hairband",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed.",
+    "category": "scraps",
+    "technique": "hairband",
+    "time_minutes": 3,
+    "steps_el": [
+      "Δίπλωσε ή κόψε το ύφασμα σε λωρίδα 5–8 εκ.",
+      "Πέρασέ το κάτω από τα μαλλιά στον αυχένα.",
+      "Φέρε τις άκρες πάνω από το κεφάλι.",
+      "Δέσε κόμπο στην κορυφή ή στο πλάι και φτιάξε τις άκρες."
+    ],
+    "steps_en": [
+      "Fold or cut the fabric into a 5–8 cm strip.",
+      "Pass it under your hair at the nape.",
+      "Bring the ends up over your head.",
+      "Tie a knot on top or at the side and arrange the ends."
+    ]
   },
   {
     "recommendation_id": "RW0047",
@@ -890,7 +1580,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft craft lace",
     "transformation_en": "Bag decoration",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily.",
+    "category": "scraps",
+    "technique": "bag_bow",
+    "time_minutes": 4,
+    "steps_el": [
+      "Δίπλωσε το κομμάτι σε λωρίδα περίπου 5 εκ.",
+      "Τύλιξέ το μία φορά γύρω από τη βάση του χερουλιού.",
+      "Δέσε φιόγκο και ίσιωσε τα «αυτιά».",
+      "Κόψε λοξά τις άκρες για πιο καθαρό αποτέλεσμα."
+    ],
+    "steps_en": [
+      "Fold the piece into a strip about 5 cm wide.",
+      "Wrap it once around the base of the handle.",
+      "Tie a bow and even out the loops.",
+      "Trim the ends at an angle for a cleaner finish."
+    ]
   },
   {
     "recommendation_id": "RW0048",
@@ -909,7 +1614,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft craft lace",
     "transformation_en": "Hat lace trim",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "scraps",
+    "technique": "hat_band",
+    "time_minutes": 10,
+    "steps_el": [
+      "Μέτρησε την περίμετρο του καπέλου πάνω από το γείσο και άφησε 20 εκ. για δέσιμο.",
+      "Τύλιξε το κομμάτι γύρω από τη βάση του καπέλου.",
+      "Δέσε κόμπο ή φιόγκο στο πλάι.",
+      "Στερέωσε με 1–2 βελονιές ή καρφίτσες για να μη γλιστρά."
+    ],
+    "steps_en": [
+      "Measure around the hat above the brim and add 20 cm for tying.",
+      "Wrap the piece around the base of the crown.",
+      "Tie a knot or bow at the side.",
+      "Secure with 1–2 stitches or pins so it does not slip."
+    ]
   },
   {
     "recommendation_id": "RW0049",
@@ -928,7 +1648,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft felt sheet",
     "transformation_en": "Handmade bag flower",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily.",
+    "category": "scraps",
+    "technique": "flower",
+    "time_minutes": 15,
+    "steps_el": [
+      "Κόψε 5 στρογγυλά πέταλα και έναν μικρό κύκλο για κέντρο.",
+      "Τοποθέτησε τα πέταλα σε κύκλο, λίγο το ένα πάνω στο άλλο.",
+      "Κόλλησε ή ράψε το κέντρο από πάνω.",
+      "Στερέωσε παραμάνα από πίσω και καρφίτσωσέ το στην τσάντα."
+    ],
+    "steps_en": [
+      "Cut 5 round petals and a small circle for the centre.",
+      "Arrange the petals in a circle, slightly overlapping.",
+      "Glue or sew the centre on top.",
+      "Attach a safety pin on the back and pin it to the bag."
+    ]
   },
   {
     "recommendation_id": "RW0050",
@@ -947,7 +1682,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft felt sheet",
     "transformation_en": "Soft hat patch",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "scraps",
+    "technique": "hat_patch",
+    "time_minutes": 12,
+    "steps_el": [
+      "Κόψε το κομμάτι σε μικρό σχήμα (κύκλο, αστέρι, καρδιά).",
+      "Γύρισε τις άκρες ή κάνε ζιγκ-ζαγκ για να μη ξεφτίζει.",
+      "Τοποθέτησέ το στο μπροστινό μέρος του καπέλου.",
+      "Ράψε ή κόλλησε με κόλλα υφάσματος."
+    ],
+    "steps_en": [
+      "Cut the piece into a small shape (circle, star, heart).",
+      "Fold or zig-zag the edges so they do not fray.",
+      "Place it on the front of the hat.",
+      "Sew or glue it with fabric glue."
+    ]
   },
   {
     "recommendation_id": "RW0051",
@@ -966,7 +1716,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft felt sheet",
     "transformation_en": "Felt bracelet",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "scraps",
+    "technique": "wrist_ornament",
+    "time_minutes": 13,
+    "steps_el": [
+      "Κόψε το ύφασμα σε μικρό σχήμα (κύκλο, λουλούδι).",
+      "Ράψε ή κόλλησέ το πάνω σε λωρίδα ή λάστιχο καρπού.",
+      "Φόρεσέ το στον καρπό.",
+      "Έλεγξε ότι δεν σφίγγει."
+    ],
+    "steps_en": [
+      "Cut the fabric into a small shape (circle, flower).",
+      "Sew or glue it onto a strip or wrist elastic.",
+      "Slip it onto your wrist.",
+      "Check that it is not tight."
+    ]
   },
   {
     "recommendation_id": "RW0052",
@@ -985,7 +1750,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Old T-shirt fabric",
     "transformation_en": "Hairband",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed.",
+    "category": "clothes",
+    "technique": "hairband",
+    "time_minutes": 3,
+    "steps_el": [
+      "Δίπλωσε ή κόψε το ύφασμα σε λωρίδα 5–8 εκ.",
+      "Πέρασέ το κάτω από τα μαλλιά στον αυχένα.",
+      "Φέρε τις άκρες πάνω από το κεφάλι.",
+      "Δέσε κόμπο στην κορυφή ή στο πλάι και φτιάξε τις άκρες."
+    ],
+    "steps_en": [
+      "Fold or cut the fabric into a 5–8 cm strip.",
+      "Pass it under your hair at the nape.",
+      "Bring the ends up over your head.",
+      "Tie a knot on top or at the side and arrange the ends."
+    ]
   },
   {
     "recommendation_id": "RW0053",
@@ -1004,7 +1784,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Old T-shirt fabric",
     "transformation_en": "Braided bracelet",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "clothes",
+    "technique": "braided_bracelet",
+    "time_minutes": 10,
+    "steps_el": [
+      "Κόψε 3 κομμάτια περίπου 30 εκ.",
+      "Δέσε τα μαζί σε κόμπο στη μία άκρη και στερέωσέ τα με ταινία στο τραπέζι.",
+      "Πλέξε κοτσίδα μέχρι να καλύψεις την περίμετρο του καρπού.",
+      "Δέσε κόμπο στο τέλος και ένωσε τις άκρες με χαλαρό κόμπο."
+    ],
+    "steps_en": [
+      "Cut 3 pieces about 30 cm long.",
+      "Knot them together at one end and tape them to a table.",
+      "Braid until it covers your wrist circumference.",
+      "Knot the end and join both ends with a loose knot."
+    ]
   },
   {
     "recommendation_id": "RW0054",
@@ -1023,7 +1818,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Old T-shirt fabric",
     "transformation_en": "Decorative tote strip",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily.",
+    "category": "clothes",
+    "technique": "handle_wrap",
+    "time_minutes": 13,
+    "steps_el": [
+      "Στερέωσε τη μία άκρη στη βάση του χερουλιού με κόμπο.",
+      "Τύλιξε σπειροειδώς γύρω από το χερούλι, λίγο πάνω από το προηγούμενο γύρισμα.",
+      "Συνέχισε μέχρι το σημείο που θες.",
+      "Δέσε την άκρη και κρύψε την κάτω από το τύλιγμα."
+    ],
+    "steps_en": [
+      "Secure one end at the base of the handle with a knot.",
+      "Wrap in a spiral around the handle, slightly overlapping each turn.",
+      "Continue as far as you like.",
+      "Tie off the end and tuck it under the wrap."
+    ]
   },
   {
     "recommendation_id": "RW0055",
@@ -1042,7 +1852,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Clean single sock",
     "transformation_en": "Soft scrunchie with elastic",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed.",
+    "category": "clothes",
+    "technique": "scrunchie",
+    "time_minutes": 15,
+    "steps_el": [
+      "Κόψε λωρίδα περίπου 50×10 εκ. και ελαστικό 20 εκ.",
+      "Δίπλωσε τη λωρίδα στη μέση κατά μήκος και ράψε την ανοιχτή πλευρά (ή κόλλα υφάσματος).",
+      "Πέρασε το ελαστικό μέσα με μια παραμάνα και δέσε τις άκρες του.",
+      "Κλείσε το άνοιγμα με μερικές βελονιές."
+    ],
+    "steps_en": [
+      "Cut a strip of about 50×10 cm and 20 cm of elastic.",
+      "Fold the strip lengthwise and sew the open side (or use fabric glue).",
+      "Thread the elastic through with a safety pin and knot its ends.",
+      "Close the gap with a few stitches."
+    ]
   },
   {
     "recommendation_id": "RW0056",
@@ -1061,7 +1886,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Clean single sock",
     "transformation_en": "Small fabric bag charm",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily.",
+    "category": "clothes",
+    "technique": "bag_charm",
+    "time_minutes": 5,
+    "steps_el": [
+      "Μάζεψε ή δίπλωσε το κομμάτι σε μικρό σχήμα.",
+      "Δέσε στη μία άκρη ένα κορδονάκι ή κλειδοκρίκο.",
+      "Πέρασέ το στο χερούλι ή στο φερμουάρ της τσάντας.",
+      "Σφίξε καλά τον κόμπο ώστε να μη φύγει."
+    ],
+    "steps_en": [
+      "Gather or fold the piece into a small shape.",
+      "Tie a short cord or key ring to one end.",
+      "Hook it onto the bag handle or zipper.",
+      "Tighten the knot so it cannot fall off."
+    ]
   },
   {
     "recommendation_id": "RW0057",
@@ -1080,7 +1920,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Clean single sock",
     "transformation_en": "Hat patch",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "clothes",
+    "technique": "hat_patch",
+    "time_minutes": 17,
+    "steps_el": [
+      "Κόψε το κομμάτι σε μικρό σχήμα (κύκλο, αστέρι, καρδιά).",
+      "Γύρισε τις άκρες ή κάνε ζιγκ-ζαγκ για να μη ξεφτίζει.",
+      "Τοποθέτησέ το στο μπροστινό μέρος του καπέλου.",
+      "Ράψε ή κόλλησε με κόλλα υφάσματος."
+    ],
+    "steps_en": [
+      "Cut the piece into a small shape (circle, star, heart).",
+      "Fold or zig-zag the edges so they do not fray.",
+      "Place it on the front of the hat.",
+      "Sew or glue it with fabric glue."
+    ]
   },
   {
     "recommendation_id": "RW0058",
@@ -1099,7 +1954,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Clean soft glove",
     "transformation_en": "Fabric bag charm",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily.",
+    "category": "clothes",
+    "technique": "bag_charm",
+    "time_minutes": 5,
+    "steps_el": [
+      "Μάζεψε ή δίπλωσε το κομμάτι σε μικρό σχήμα.",
+      "Δέσε στη μία άκρη ένα κορδονάκι ή κλειδοκρίκο.",
+      "Πέρασέ το στο χερούλι ή στο φερμουάρ της τσάντας.",
+      "Σφίξε καλά τον κόμπο ώστε να μη φύγει."
+    ],
+    "steps_en": [
+      "Gather or fold the piece into a small shape.",
+      "Tie a short cord or key ring to one end.",
+      "Hook it onto the bag handle or zipper.",
+      "Tighten the knot so it cannot fall off."
+    ]
   },
   {
     "recommendation_id": "RW0059",
@@ -1118,7 +1988,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Clean soft glove",
     "transformation_en": "Decorative cuff over a sleeve",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "clothes",
+    "technique": "wrist_cuff",
+    "time_minutes": 5,
+    "steps_el": [
+      "Κόψε ή δίπλωσε λωρίδα 5–8 εκ. πλάτος, αρκετά μακριά για τον καρπό.",
+      "Τύλιξέ τη γύρω από τον καρπό ή πάνω από το μανίκι.",
+      "Δέσε μικρό κόμπο ή στερέωσε με κουμπί/velcro.",
+      "Βεβαιώσου ότι χωράει ένα δάχτυλο από κάτω."
+    ],
+    "steps_en": [
+      "Cut or fold a 5–8 cm strip long enough for your wrist.",
+      "Wrap it around your wrist or over your sleeve.",
+      "Tie a small knot or secure with a button/velcro.",
+      "Make sure one finger fits underneath."
+    ]
   },
   {
     "recommendation_id": "RW0060",
@@ -1137,7 +2022,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Clean soft glove",
     "transformation_en": "Hat appliqué",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "clothes",
+    "technique": "hat_patch",
+    "time_minutes": 17,
+    "steps_el": [
+      "Κόψε το κομμάτι σε μικρό σχήμα (κύκλο, αστέρι, καρδιά).",
+      "Γύρισε τις άκρες ή κάνε ζιγκ-ζαγκ για να μη ξεφτίζει.",
+      "Τοποθέτησέ το στο μπροστινό μέρος του καπέλου.",
+      "Ράψε ή κόλλησε με κόλλα υφάσματος."
+    ],
+    "steps_en": [
+      "Cut the piece into a small shape (circle, star, heart).",
+      "Fold or zig-zag the edges so they do not fray.",
+      "Place it on the front of the hat.",
+      "Sew or glue it with fabric glue."
+    ]
   },
   {
     "recommendation_id": "RW0061",
@@ -1156,7 +2056,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Old knit sleeve",
     "transformation_en": "Wrist cuff over clothing",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "clothes",
+    "technique": "wrist_cuff",
+    "time_minutes": 5,
+    "steps_el": [
+      "Κόψε ή δίπλωσε λωρίδα 5–8 εκ. πλάτος, αρκετά μακριά για τον καρπό.",
+      "Τύλιξέ τη γύρω από τον καρπό ή πάνω από το μανίκι.",
+      "Δέσε μικρό κόμπο ή στερέωσε με κουμπί/velcro.",
+      "Βεβαιώσου ότι χωράει ένα δάχτυλο από κάτω."
+    ],
+    "steps_en": [
+      "Cut or fold a 5–8 cm strip long enough for your wrist.",
+      "Wrap it around your wrist or over your sleeve.",
+      "Tie a small knot or secure with a button/velcro.",
+      "Make sure one finger fits underneath."
+    ]
   },
   {
     "recommendation_id": "RW0062",
@@ -1175,7 +2090,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Old knit sleeve",
     "transformation_en": "Soft bag decoration",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily.",
+    "category": "clothes",
+    "technique": "bag_drape",
+    "time_minutes": 5,
+    "steps_el": [
+      "Άπλωσε το ύφασμα πάνω από τη μία πλευρά της τσάντας.",
+      "Δίπλωσε τις άκρες ώστε να ταιριάζει στο μέγεθος.",
+      "Στερέωσε στις γωνίες με παραμάνες ή κόμπους στα χερούλια.",
+      "Έλεγξε ότι το άνοιγμα της τσάντας μένει ελεύθερο."
+    ],
+    "steps_en": [
+      "Lay the fabric over one side of the bag.",
+      "Fold the edges in so it matches the bag's size.",
+      "Secure the corners with safety pins or knots on the handles.",
+      "Check that the bag opening stays clear."
+    ]
   },
   {
     "recommendation_id": "RW0063",
@@ -1194,7 +2124,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Old knit sleeve",
     "transformation_en": "Wide hairband",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed.",
+    "category": "clothes",
+    "technique": "hairband",
+    "time_minutes": 8,
+    "steps_el": [
+      "Δίπλωσε ή κόψε το ύφασμα σε λωρίδα 5–8 εκ.",
+      "Πέρασέ το κάτω από τα μαλλιά στον αυχένα.",
+      "Φέρε τις άκρες πάνω από το κεφάλι.",
+      "Δέσε κόμπο στην κορυφή ή στο πλάι και φτιάξε τις άκρες."
+    ],
+    "steps_en": [
+      "Fold or cut the fabric into a 5–8 cm strip.",
+      "Pass it under your hair at the nape.",
+      "Bring the ends up over your head.",
+      "Tie a knot on top or at the side and arrange the ends."
+    ]
   },
   {
     "recommendation_id": "RW0064",
@@ -1213,7 +2158,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft denim scrap",
     "transformation_en": "Bag patch",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily.",
+    "category": "scraps",
+    "technique": "bag_patch",
+    "time_minutes": 15,
+    "steps_el": [
+      "Κόψε το ύφασμα στο σχήμα που θες (τετράγωνο, καρδιά, κύκλο).",
+      "Γύρισε τις άκρες προς τα μέσα ή κάνε ζιγκ-ζαγκ για να μη ξεφτίζει.",
+      "Τοποθέτησέ το στην τσάντα και στερέωσε με καρφίτσες.",
+      "Ράψε γύρω-γύρω ή κόλλησε με θερμοκολλητική ταινία."
+    ],
+    "steps_en": [
+      "Cut the fabric to the shape you like (square, heart, circle).",
+      "Fold the edges in or zig-zag them so they do not fray.",
+      "Position it on the bag and hold with pins.",
+      "Sew around it or use iron-on adhesive."
+    ]
   },
   {
     "recommendation_id": "RW0065",
@@ -1232,7 +2192,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft denim scrap",
     "transformation_en": "Hat decoration",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "scraps",
+    "technique": "hat_patch",
+    "time_minutes": 12,
+    "steps_el": [
+      "Κόψε το κομμάτι σε μικρό σχήμα (κύκλο, αστέρι, καρδιά).",
+      "Γύρισε τις άκρες ή κάνε ζιγκ-ζαγκ για να μη ξεφτίζει.",
+      "Τοποθέτησέ το στο μπροστινό μέρος του καπέλου.",
+      "Ράψε ή κόλλησε με κόλλα υφάσματος."
+    ],
+    "steps_en": [
+      "Cut the piece into a small shape (circle, star, heart).",
+      "Fold or zig-zag the edges so they do not fray.",
+      "Place it on the front of the hat.",
+      "Sew or glue it with fabric glue."
+    ]
   },
   {
     "recommendation_id": "RW0066",
@@ -1251,7 +2226,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft denim scrap",
     "transformation_en": "Loose fabric wrist cuff",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "scraps",
+    "technique": "wrist_cuff",
+    "time_minutes": 10,
+    "steps_el": [
+      "Κόψε ή δίπλωσε λωρίδα 5–8 εκ. πλάτος, αρκετά μακριά για τον καρπό.",
+      "Τύλιξέ τη γύρω από τον καρπό ή πάνω από το μανίκι.",
+      "Δέσε μικρό κόμπο ή στερέωσε με κουμπί/velcro.",
+      "Βεβαιώσου ότι χωράει ένα δάχτυλο από κάτω."
+    ],
+    "steps_en": [
+      "Cut or fold a 5–8 cm strip long enough for your wrist.",
+      "Wrap it around your wrist or over your sleeve.",
+      "Tie a small knot or secure with a button/velcro.",
+      "Make sure one finger fits underneath."
+    ]
   },
   {
     "recommendation_id": "RW0067",
@@ -1270,7 +2260,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft mesh fabric",
     "transformation_en": "Mesh bag overlay",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily.",
+    "category": "scraps",
+    "technique": "bag_drape",
+    "time_minutes": 5,
+    "steps_el": [
+      "Άπλωσε το ύφασμα πάνω από τη μία πλευρά της τσάντας.",
+      "Δίπλωσε τις άκρες ώστε να ταιριάζει στο μέγεθος.",
+      "Στερέωσε στις γωνίες με παραμάνες ή κόμπους στα χερούλια.",
+      "Έλεγξε ότι το άνοιγμα της τσάντας μένει ελεύθερο."
+    ],
+    "steps_en": [
+      "Lay the fabric over one side of the bag.",
+      "Fold the edges in so it matches the bag's size.",
+      "Secure the corners with safety pins or knots on the handles.",
+      "Check that the bag opening stays clear."
+    ]
   },
   {
     "recommendation_id": "RW0068",
@@ -1289,7 +2294,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft mesh fabric",
     "transformation_en": "Decorative hat band",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "scraps",
+    "technique": "hat_band",
+    "time_minutes": 5,
+    "steps_el": [
+      "Μέτρησε την περίμετρο του καπέλου πάνω από το γείσο και άφησε 20 εκ. για δέσιμο.",
+      "Τύλιξε το κομμάτι γύρω από τη βάση του καπέλου.",
+      "Δέσε κόμπο ή φιόγκο στο πλάι.",
+      "Στερέωσε με 1–2 βελονιές ή καρφίτσες για να μη γλιστρά."
+    ],
+    "steps_en": [
+      "Measure around the hat above the brim and add 20 cm for tying.",
+      "Wrap the piece around the base of the crown.",
+      "Tie a knot or bow at the side.",
+      "Secure with 1–2 stitches or pins so it does not slip."
+    ]
   },
   {
     "recommendation_id": "RW0069",
@@ -1308,7 +2328,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft mesh fabric",
     "transformation_en": "Hair decoration over a headband",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed.",
+    "category": "scraps",
+    "technique": "hair_accent",
+    "time_minutes": 13,
+    "steps_el": [
+      "Φόρεσε μια απλή στέκα ή κορδέλα ως βάση.",
+      "Ετοίμασε το διακοσμητικό κομμάτι (φούντα, δίχτυ, πομ-πομ).",
+      "Στερέωσέ το στη βάση με κλωστή ή μικρό τσιμπιδάκι.",
+      "Έλεγξε ότι δεν ακουμπά τα μάτια και δεν κουνιέται."
+    ],
+    "steps_en": [
+      "Use a simple headband or ribbon as a base.",
+      "Prepare the decorative piece (tassel, mesh, pom-pom).",
+      "Attach it to the base with thread or a small clip.",
+      "Check it stays clear of your eyes and does not wobble."
+    ]
   },
   {
     "recommendation_id": "RW0070",
@@ -1327,7 +2362,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Organza scrap",
     "transformation_en": "Oversized hair bow",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed.",
+    "category": "scraps",
+    "technique": "hair_bow",
+    "time_minutes": 4,
+    "steps_el": [
+      "Κόψε ή δίπλωσε μια λωρίδα περίπου 40–60 εκ.",
+      "Μάζεψε τα μαλλιά σε αλογοουρά ή μισή αλογοουρά με λαστιχάκι.",
+      "Τύλιξε τη λωρίδα πάνω από το λαστιχάκι.",
+      "Δέσε φιόγκο και ίσιωσε τα «αυτιά» ώστε να είναι ίδια."
+    ],
+    "steps_en": [
+      "Cut or fold a strip about 40–60 cm long.",
+      "Gather your hair into a ponytail or half-up with an elastic.",
+      "Wrap the strip over the elastic.",
+      "Tie a bow and even out the loops."
+    ]
   },
   {
     "recommendation_id": "RW0071",
@@ -1346,7 +2396,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Organza scrap",
     "transformation_en": "Decorative bag bow",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily.",
+    "category": "scraps",
+    "technique": "bag_bow",
+    "time_minutes": 4,
+    "steps_el": [
+      "Δίπλωσε το κομμάτι σε λωρίδα περίπου 5 εκ.",
+      "Τύλιξέ το μία φορά γύρω από τη βάση του χερουλιού.",
+      "Δέσε φιόγκο και ίσιωσε τα «αυτιά».",
+      "Κόψε λοξά τις άκρες για πιο καθαρό αποτέλεσμα."
+    ],
+    "steps_en": [
+      "Fold the piece into a strip about 5 cm wide.",
+      "Wrap it once around the base of the handle.",
+      "Tie a bow and even out the loops.",
+      "Trim the ends at an angle for a cleaner finish."
+    ]
   },
   {
     "recommendation_id": "RW0072",
@@ -1365,7 +2430,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Organza scrap",
     "transformation_en": "Airy hat detail",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "scraps",
+    "technique": "hat_accent",
+    "time_minutes": 10,
+    "steps_el": [
+      "Διάλεξε το σημείο: πλάι του καπέλου ή πάνω στη λωρίδα.",
+      "Μάζεψε το κομμάτι σε μικρό σχήμα ή φιόγκο.",
+      "Στερέωσέ το με παραμάνα ή μερικές βελονιές.",
+      "Έλεγξε ότι κάθεται σταθερά όταν κουνάς το κεφάλι."
+    ],
+    "steps_en": [
+      "Choose the spot: side of the hat or on the band.",
+      "Gather the piece into a small shape or bow.",
+      "Fasten it with a safety pin or a few stitches.",
+      "Check it stays put when you move your head."
+    ]
   },
   {
     "recommendation_id": "RW0073",
@@ -1384,7 +2464,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Small fleece blanket",
     "transformation_en": "Cape over clothing",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "home",
+    "technique": "cape",
+    "time_minutes": 3,
+    "steps_el": [
+      "Δίπλωσε την κουβέρτα σε τρίγωνο ή ορθογώνιο ανάλογα με το μέγεθος.",
+      "Ρίξ' την πάνω από τους ώμους, πάνω από τα ρούχα σου.",
+      "Στερέωσε τις άκρες μπροστά με μεγάλη καρφίτσα ή χαλαρό κόμπο.",
+      "Βάλε από πάνω ζώνη αν θες πιο σμιλεμένο σχήμα."
+    ],
+    "steps_en": [
+      "Fold the blanket into a triangle or rectangle depending on its size.",
+      "Drape it over your shoulders, on top of your clothes.",
+      "Fasten the ends in front with a large pin or a loose knot.",
+      "Add a belt over it for a more shaped silhouette."
+    ]
   },
   {
     "recommendation_id": "RW0074",
@@ -1403,7 +2498,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Small fleece blanket",
     "transformation_en": "Oversized shawl",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "home",
+    "technique": "shoulder_wrap",
+    "time_minutes": 3,
+    "steps_el": [
+      "Άπλωσε το ύφασμα και δίπλωσέ το στη μέση κατά μήκος.",
+      "Ρίξ' το πάνω από τους ώμους σαν σάλι, με το κέντρο στην πλάτη.",
+      "Φέρε τις άκρες μπροστά και δέσε τες σε έναν χαλαρό κόμπο ή στερέωσέ τες με καρφίτσα.",
+      "Φτιάξε τις πτυχές ώστε να πέφτει ομοιόμορφα."
+    ],
+    "steps_en": [
+      "Lay the fabric flat and fold it in half lengthwise.",
+      "Drape it over your shoulders like a shawl, centred on your back.",
+      "Bring the ends forward and tie a loose knot or fasten with a pin.",
+      "Adjust the folds so it falls evenly."
+    ]
   },
   {
     "recommendation_id": "RW0075",
@@ -1422,7 +2532,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Small fleece blanket",
     "transformation_en": "Soft pleated scarf",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep the knot loose and avoid constriction."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep the knot loose and avoid constriction.",
+    "category": "home",
+    "technique": "big_scarf",
+    "time_minutes": 8,
+    "steps_el": [
+      "Δίπλωσε το ύφασμα στη μέση κατά μήκος.",
+      "Τύλιξέ το μία φορά γύρω από τον λαιμό.",
+      "Πέρασε τις άκρες μέσα από τη θηλιά ή δέσε χαλαρό κόμπο.",
+      "Άφησε αρκετό χώρο ώστε να μη σφίγγει."
+    ],
+    "steps_en": [
+      "Fold the fabric in half lengthwise.",
+      "Wrap it once around your neck.",
+      "Pull the ends through the loop or tie a loose knot.",
+      "Leave enough room so it is not tight."
+    ]
   },
   {
     "recommendation_id": "RW0076",
@@ -1441,7 +2566,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Light woven throw",
     "transformation_en": "Shoulder shawl",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "home",
+    "technique": "shoulder_wrap",
+    "time_minutes": 3,
+    "steps_el": [
+      "Άπλωσε το ύφασμα και δίπλωσέ το στη μέση κατά μήκος.",
+      "Ρίξ' το πάνω από τους ώμους σαν σάλι, με το κέντρο στην πλάτη.",
+      "Φέρε τις άκρες μπροστά και δέσε τες σε έναν χαλαρό κόμπο ή στερέωσέ τες με καρφίτσα.",
+      "Φτιάξε τις πτυχές ώστε να πέφτει ομοιόμορφα."
+    ],
+    "steps_en": [
+      "Lay the fabric flat and fold it in half lengthwise.",
+      "Drape it over your shoulders like a shawl, centred on your back.",
+      "Bring the ends forward and tie a loose knot or fasten with a pin.",
+      "Adjust the folds so it falls evenly."
+    ]
   },
   {
     "recommendation_id": "RW0077",
@@ -1460,7 +2600,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Light woven throw",
     "transformation_en": "Temporary beach wrap",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Wear over normal clothing, not as a standalone garment."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Wear over normal clothing, not as a standalone garment.",
+    "category": "home",
+    "technique": "waist_wrap",
+    "time_minutes": 5,
+    "steps_el": [
+      "Τύλιξε το ύφασμα γύρω από τη μέση, πάνω από μαγιό ή ρούχο.",
+      "Φέρε τις δύο άκρες στο πλάι του γοφού.",
+      "Δέσε διπλό κόμπο και άφησε τις άκρες να κρέμονται.",
+      "Έλεγξε ότι κάθεται σταθερά όταν περπατάς."
+    ],
+    "steps_en": [
+      "Wrap the fabric around your waist, over swimwear or clothing.",
+      "Bring both ends to the side of your hip.",
+      "Tie a double knot and let the ends hang.",
+      "Check it stays secure while you walk."
+    ]
   },
   {
     "recommendation_id": "RW0078",
@@ -1479,7 +2634,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Light woven throw",
     "transformation_en": "Decorative bag drape",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily.",
+    "category": "home",
+    "technique": "bag_drape",
+    "time_minutes": 10,
+    "steps_el": [
+      "Άπλωσε το ύφασμα πάνω από τη μία πλευρά της τσάντας.",
+      "Δίπλωσε τις άκρες ώστε να ταιριάζει στο μέγεθος.",
+      "Στερέωσε στις γωνίες με παραμάνες ή κόμπους στα χερούλια.",
+      "Έλεγξε ότι το άνοιγμα της τσάντας μένει ελεύθερο."
+    ],
+    "steps_en": [
+      "Lay the fabric over one side of the bag.",
+      "Fold the edges in so it matches the bag's size.",
+      "Secure the corners with safety pins or knots on the handles.",
+      "Check that the bag opening stays clear."
+    ]
   },
   {
     "recommendation_id": "RW0079",
@@ -1498,7 +2668,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Fabric curtain tieback",
     "transformation_en": "Ribbon around a hat",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "home",
+    "technique": "hat_band",
+    "time_minutes": 5,
+    "steps_el": [
+      "Μέτρησε την περίμετρο του καπέλου πάνω από το γείσο και άφησε 20 εκ. για δέσιμο.",
+      "Τύλιξε το κομμάτι γύρω από τη βάση του καπέλου.",
+      "Δέσε κόμπο ή φιόγκο στο πλάι.",
+      "Στερέωσε με 1–2 βελονιές ή καρφίτσες για να μη γλιστρά."
+    ],
+    "steps_en": [
+      "Measure around the hat above the brim and add 20 cm for tying.",
+      "Wrap the piece around the base of the crown.",
+      "Tie a knot or bow at the side.",
+      "Secure with 1–2 stitches or pins so it does not slip."
+    ]
   },
   {
     "recommendation_id": "RW0080",
@@ -1517,7 +2702,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Fabric curtain tieback",
     "transformation_en": "Bag accessory",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily.",
+    "category": "home",
+    "technique": "bag_loop",
+    "time_minutes": 5,
+    "steps_el": [
+      "Κόψε ένα κομμάτι 30–40 εκ.",
+      "Δίπλωσέ το στη μέση και κάνε θηλιά.",
+      "Πέρασε τη θηλιά γύρω από το χερούλι (lark's head knot).",
+      "Δέσε κόμπους στις άκρες για διακόσμηση."
+    ],
+    "steps_en": [
+      "Cut a piece of 30–40 cm.",
+      "Fold it in half to make a loop.",
+      "Pass the loop around the handle (lark's head knot).",
+      "Knot the ends for decoration."
+    ]
   },
   {
     "recommendation_id": "RW0081",
@@ -1536,7 +2736,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Fabric curtain tieback",
     "transformation_en": "Loose hairband",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed.",
+    "category": "home",
+    "technique": "hairband",
+    "time_minutes": 8,
+    "steps_el": [
+      "Δίπλωσε ή κόψε το ύφασμα σε λωρίδα 5–8 εκ.",
+      "Πέρασέ το κάτω από τα μαλλιά στον αυχένα.",
+      "Φέρε τις άκρες πάνω από το κεφάλι.",
+      "Δέσε κόμπο στην κορυφή ή στο πλάι και φτιάξε τις άκρες."
+    ],
+    "steps_en": [
+      "Fold or cut the fabric into a 5–8 cm strip.",
+      "Pass it under your hair at the nape.",
+      "Bring the ends up over your head.",
+      "Tie a knot on top or at the side and arrange the ends."
+    ]
   },
   {
     "recommendation_id": "RW0082",
@@ -1555,7 +2770,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Clean curtain fabric",
     "transformation_en": "Light shoulder cover",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "home",
+    "technique": "shoulder_wrap",
+    "time_minutes": 3,
+    "steps_el": [
+      "Άπλωσε το ύφασμα και δίπλωσέ το στη μέση κατά μήκος.",
+      "Ρίξ' το πάνω από τους ώμους σαν σάλι, με το κέντρο στην πλάτη.",
+      "Φέρε τις άκρες μπροστά και δέσε τες σε έναν χαλαρό κόμπο ή στερέωσέ τες με καρφίτσα.",
+      "Φτιάξε τις πτυχές ώστε να πέφτει ομοιόμορφα."
+    ],
+    "steps_en": [
+      "Lay the fabric flat and fold it in half lengthwise.",
+      "Drape it over your shoulders like a shawl, centred on your back.",
+      "Bring the ends forward and tie a loose knot or fasten with a pin.",
+      "Adjust the folds so it falls evenly."
+    ]
   },
   {
     "recommendation_id": "RW0083",
@@ -1574,7 +2804,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Clean curtain fabric",
     "transformation_en": "Decorative scarf",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep the knot loose and avoid constriction."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep the knot loose and avoid constriction.",
+    "category": "home",
+    "technique": "neck_scarf",
+    "time_minutes": 3,
+    "steps_el": [
+      "Δίπλωσε το ύφασμα διαγώνια σε τρίγωνο ή σε λωρίδα.",
+      "Τύλιξέ το χαλαρά γύρω από τον λαιμό.",
+      "Δέσε μικρό κόμπο στο πλάι ή μπροστά.",
+      "Γύρισε τον κόμπο ελαφρώς στο πλάι για πιο retro εφέ."
+    ],
+    "steps_en": [
+      "Fold the fabric diagonally into a triangle or a band.",
+      "Wrap it loosely around your neck.",
+      "Tie a small knot at the side or front.",
+      "Turn the knot slightly to the side for a retro feel."
+    ]
   },
   {
     "recommendation_id": "RW0084",
@@ -1593,7 +2838,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Clean curtain fabric",
     "transformation_en": "Tote bag bow",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily.",
+    "category": "home",
+    "technique": "bag_bow",
+    "time_minutes": 9,
+    "steps_el": [
+      "Δίπλωσε το κομμάτι σε λωρίδα περίπου 5 εκ.",
+      "Τύλιξέ το μία φορά γύρω από τη βάση του χερουλιού.",
+      "Δέσε φιόγκο και ίσιωσε τα «αυτιά».",
+      "Κόψε λοξά τις άκρες για πιο καθαρό αποτέλεσμα."
+    ],
+    "steps_en": [
+      "Fold the piece into a strip about 5 cm wide.",
+      "Wrap it once around the base of the handle.",
+      "Tie a bow and even out the loops.",
+      "Trim the ends at an angle for a cleaner finish."
+    ]
   },
   {
     "recommendation_id": "RW0085",
@@ -1612,7 +2872,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Thick cotton thread",
     "transformation_en": "Braided bracelet",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "cords",
+    "technique": "braided_bracelet",
+    "time_minutes": 10,
+    "steps_el": [
+      "Κόψε 3 κομμάτια περίπου 30 εκ.",
+      "Δέσε τα μαζί σε κόμπο στη μία άκρη και στερέωσέ τα με ταινία στο τραπέζι.",
+      "Πλέξε κοτσίδα μέχρι να καλύψεις την περίμετρο του καρπού.",
+      "Δέσε κόμπο στο τέλος και ένωσε τις άκρες με χαλαρό κόμπο."
+    ],
+    "steps_en": [
+      "Cut 3 pieces about 30 cm long.",
+      "Knot them together at one end and tape them to a table.",
+      "Braid until it covers your wrist circumference.",
+      "Knot the end and join both ends with a loose knot."
+    ]
   },
   {
     "recommendation_id": "RW0086",
@@ -1631,7 +2906,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Thick cotton thread",
     "transformation_en": "Bag tassel",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily.",
+    "category": "cords",
+    "technique": "tassel",
+    "time_minutes": 10,
+    "steps_el": [
+      "Τύλιξε την κλωστή 20–30 φορές γύρω από ένα χαρτόνι 8 εκ.",
+      "Πέρασε ένα κομμάτι κλωστή από πάνω και δέσε σφιχτά.",
+      "Κόψε τις θηλιές στο κάτω μέρος.",
+      "Δέσε ξανά 1 εκ. κάτω από την κορυφή και κρέμασέ τη στην τσάντα."
+    ],
+    "steps_en": [
+      "Wrap the string 20–30 times around an 8 cm piece of card.",
+      "Thread a piece through the top and tie tightly.",
+      "Cut the loops at the bottom.",
+      "Tie again 1 cm below the top and hang it on the bag."
+    ]
   },
   {
     "recommendation_id": "RW0087",
@@ -1650,7 +2940,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Thick cotton thread",
     "transformation_en": "Small hat braid",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "cords",
+    "technique": "hat_braid",
+    "time_minutes": 17,
+    "steps_el": [
+      "Κόψε 3 κομμάτια λίγο μεγαλύτερα από την περίμετρο του καπέλου.",
+      "Πλέξε τα σε κοτσίδα.",
+      "Τύλιξε την κοτσίδα γύρω από τη βάση του καπέλου.",
+      "Δέσε τις άκρες στο πλάι και άφησέ τες να κρέμονται."
+    ],
+    "steps_en": [
+      "Cut 3 pieces slightly longer than the hat's circumference.",
+      "Braid them together.",
+      "Wrap the braid around the base of the crown.",
+      "Tie the ends at the side and let them hang."
+    ]
   },
   {
     "recommendation_id": "RW0088",
@@ -1669,7 +2974,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft macramé cord",
     "transformation_en": "Macramé bracelet",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "cords",
+    "technique": "macrame",
+    "time_minutes": 20,
+    "steps_el": [
+      "Κόψε 2 κορδόνια: ένα 40 εκ. (βάση) και ένα 100 εκ. (πλέξη).",
+      "Δίπλωσε το μακρύ στη μέση πάνω από τη βάση.",
+      "Κάνε επαναλαμβανόμενους τετράγωνους κόμπους (square knot) μέχρι 15 εκ.",
+      "Δέσε τις άκρες και άφησε χαλαρό, ρυθμιζόμενο κούμπωμα."
+    ],
+    "steps_en": [
+      "Cut 2 cords: one 40 cm (core) and one 100 cm (knotting).",
+      "Fold the long cord in half over the core.",
+      "Tie repeated square knots for about 15 cm.",
+      "Knot the ends and leave a loose, adjustable fastening."
+    ]
   },
   {
     "recommendation_id": "RW0089",
@@ -1688,7 +3008,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft macramé cord",
     "transformation_en": "Decorative tote loop",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily.",
+    "category": "cords",
+    "technique": "bag_loop",
+    "time_minutes": 5,
+    "steps_el": [
+      "Κόψε ένα κομμάτι 30–40 εκ.",
+      "Δίπλωσέ το στη μέση και κάνε θηλιά.",
+      "Πέρασε τη θηλιά γύρω από το χερούλι (lark's head knot).",
+      "Δέσε κόμπους στις άκρες για διακόσμηση."
+    ],
+    "steps_en": [
+      "Cut a piece of 30–40 cm.",
+      "Fold it in half to make a loop.",
+      "Pass the loop around the handle (lark's head knot).",
+      "Knot the ends for decoration."
+    ]
   },
   {
     "recommendation_id": "RW0090",
@@ -1707,7 +3042,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft macramé cord",
     "transformation_en": "Hat braid detail",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "cords",
+    "technique": "hat_braid",
+    "time_minutes": 17,
+    "steps_el": [
+      "Κόψε 3 κομμάτια λίγο μεγαλύτερα από την περίμετρο του καπέλου.",
+      "Πλέξε τα σε κοτσίδα.",
+      "Τύλιξε την κοτσίδα γύρω από τη βάση του καπέλου.",
+      "Δέσε τις άκρες στο πλάι και άφησέ τες να κρέμονται."
+    ],
+    "steps_en": [
+      "Cut 3 pieces slightly longer than the hat's circumference.",
+      "Braid them together.",
+      "Wrap the braid around the base of the crown.",
+      "Tie the ends at the side and let them hang."
+    ]
   },
   {
     "recommendation_id": "RW0091",
@@ -1726,7 +3076,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft velvet scrap",
     "transformation_en": "Velvet hair bow",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed.",
+    "category": "scraps",
+    "technique": "hair_bow",
+    "time_minutes": 4,
+    "steps_el": [
+      "Κόψε ή δίπλωσε μια λωρίδα περίπου 40–60 εκ.",
+      "Μάζεψε τα μαλλιά σε αλογοουρά ή μισή αλογοουρά με λαστιχάκι.",
+      "Τύλιξε τη λωρίδα πάνω από το λαστιχάκι.",
+      "Δέσε φιόγκο και ίσιωσε τα «αυτιά» ώστε να είναι ίδια."
+    ],
+    "steps_en": [
+      "Cut or fold a strip about 40–60 cm long.",
+      "Gather your hair into a ponytail or half-up with an elastic.",
+      "Wrap the strip over the elastic.",
+      "Tie a bow and even out the loops."
+    ]
   },
   {
     "recommendation_id": "RW0092",
@@ -1745,7 +3110,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft velvet scrap",
     "transformation_en": "Bag accessory",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily.",
+    "category": "scraps",
+    "technique": "bag_bow",
+    "time_minutes": 4,
+    "steps_el": [
+      "Δίπλωσε το κομμάτι σε λωρίδα περίπου 5 εκ.",
+      "Τύλιξέ το μία φορά γύρω από τη βάση του χερουλιού.",
+      "Δέσε φιόγκο και ίσιωσε τα «αυτιά».",
+      "Κόψε λοξά τις άκρες για πιο καθαρό αποτέλεσμα."
+    ],
+    "steps_en": [
+      "Fold the piece into a strip about 5 cm wide.",
+      "Wrap it once around the base of the handle.",
+      "Tie a bow and even out the loops.",
+      "Trim the ends at an angle for a cleaner finish."
+    ]
   },
   {
     "recommendation_id": "RW0093",
@@ -1764,7 +3144,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft velvet scrap",
     "transformation_en": "Ribbon around a hat",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "scraps",
+    "technique": "hat_band",
+    "time_minutes": 10,
+    "steps_el": [
+      "Μέτρησε την περίμετρο του καπέλου πάνω από το γείσο και άφησε 20 εκ. για δέσιμο.",
+      "Τύλιξε το κομμάτι γύρω από τη βάση του καπέλου.",
+      "Δέσε κόμπο ή φιόγκο στο πλάι.",
+      "Στερέωσε με 1–2 βελονιές ή καρφίτσες για να μη γλιστρά."
+    ],
+    "steps_en": [
+      "Measure around the hat above the brim and add 20 cm for tying.",
+      "Wrap the piece around the base of the crown.",
+      "Tie a knot or bow at the side.",
+      "Secure with 1–2 stitches or pins so it does not slip."
+    ]
   },
   {
     "recommendation_id": "RW0094",
@@ -1783,7 +3178,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft canvas scrap",
     "transformation_en": "Bag patch",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily.",
+    "category": "scraps",
+    "technique": "bag_patch",
+    "time_minutes": 15,
+    "steps_el": [
+      "Κόψε το ύφασμα στο σχήμα που θες (τετράγωνο, καρδιά, κύκλο).",
+      "Γύρισε τις άκρες προς τα μέσα ή κάνε ζιγκ-ζαγκ για να μη ξεφτίζει.",
+      "Τοποθέτησέ το στην τσάντα και στερέωσε με καρφίτσες.",
+      "Ράψε γύρω-γύρω ή κόλλησε με θερμοκολλητική ταινία."
+    ],
+    "steps_en": [
+      "Cut the fabric to the shape you like (square, heart, circle).",
+      "Fold the edges in or zig-zag them so they do not fray.",
+      "Position it on the bag and hold with pins.",
+      "Sew around it or use iron-on adhesive."
+    ]
   },
   {
     "recommendation_id": "RW0095",
@@ -1802,7 +3212,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft canvas scrap",
     "transformation_en": "Hat decoration",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "scraps",
+    "technique": "hat_patch",
+    "time_minutes": 12,
+    "steps_el": [
+      "Κόψε το κομμάτι σε μικρό σχήμα (κύκλο, αστέρι, καρδιά).",
+      "Γύρισε τις άκρες ή κάνε ζιγκ-ζαγκ για να μη ξεφτίζει.",
+      "Τοποθέτησέ το στο μπροστινό μέρος του καπέλου.",
+      "Ράψε ή κόλλησε με κόλλα υφάσματος."
+    ],
+    "steps_en": [
+      "Cut the piece into a small shape (circle, star, heart).",
+      "Fold or zig-zag the edges so they do not fray.",
+      "Place it on the front of the hat.",
+      "Sew or glue it with fabric glue."
+    ]
   },
   {
     "recommendation_id": "RW0096",
@@ -1821,7 +3246,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft canvas scrap",
     "transformation_en": "Wide fabric wrist cuff",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "scraps",
+    "technique": "wrist_cuff",
+    "time_minutes": 10,
+    "steps_el": [
+      "Κόψε ή δίπλωσε λωρίδα 5–8 εκ. πλάτος, αρκετά μακριά για τον καρπό.",
+      "Τύλιξέ τη γύρω από τον καρπό ή πάνω από το μανίκι.",
+      "Δέσε μικρό κόμπο ή στερέωσε με κουμπί/velcro.",
+      "Βεβαιώσου ότι χωράει ένα δάχτυλο από κάτω."
+    ],
+    "steps_en": [
+      "Cut or fold a 5–8 cm strip long enough for your wrist.",
+      "Wrap it around your wrist or over your sleeve.",
+      "Tie a small knot or secure with a button/velcro.",
+      "Make sure one finger fits underneath."
+    ]
   },
   {
     "recommendation_id": "RW0097",
@@ -1840,7 +3280,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Unused microfiber cloth",
     "transformation_en": "Soft hairband",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed.",
+    "category": "towels",
+    "technique": "hairband",
+    "time_minutes": 3,
+    "steps_el": [
+      "Δίπλωσε ή κόψε το ύφασμα σε λωρίδα 5–8 εκ.",
+      "Πέρασέ το κάτω από τα μαλλιά στον αυχένα.",
+      "Φέρε τις άκρες πάνω από το κεφάλι.",
+      "Δέσε κόμπο στην κορυφή ή στο πλάι και φτιάξε τις άκρες."
+    ],
+    "steps_en": [
+      "Fold or cut the fabric into a 5–8 cm strip.",
+      "Pass it under your hair at the nape.",
+      "Bring the ends up over your head.",
+      "Tie a knot on top or at the side and arrange the ends."
+    ]
   },
   {
     "recommendation_id": "RW0098",
@@ -1859,7 +3314,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Unused microfiber cloth",
     "transformation_en": "Bag bow",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily.",
+    "category": "towels",
+    "technique": "bag_bow",
+    "time_minutes": 4,
+    "steps_el": [
+      "Δίπλωσε το κομμάτι σε λωρίδα περίπου 5 εκ.",
+      "Τύλιξέ το μία φορά γύρω από τη βάση του χερουλιού.",
+      "Δέσε φιόγκο και ίσιωσε τα «αυτιά».",
+      "Κόψε λοξά τις άκρες για πιο καθαρό αποτέλεσμα."
+    ],
+    "steps_en": [
+      "Fold the piece into a strip about 5 cm wide.",
+      "Wrap it once around the base of the handle.",
+      "Tie a bow and even out the loops.",
+      "Trim the ends at an angle for a cleaner finish."
+    ]
   },
   {
     "recommendation_id": "RW0099",
@@ -1878,7 +3348,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Unused microfiber cloth",
     "transformation_en": "Relaxed wrist cuff",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "towels",
+    "technique": "wrist_cuff",
+    "time_minutes": 10,
+    "steps_el": [
+      "Κόψε ή δίπλωσε λωρίδα 5–8 εκ. πλάτος, αρκετά μακριά για τον καρπό.",
+      "Τύλιξέ τη γύρω από τον καρπό ή πάνω από το μανίκι.",
+      "Δέσε μικρό κόμπο ή στερέωσε με κουμπί/velcro.",
+      "Βεβαιώσου ότι χωράει ένα δάχτυλο από κάτω."
+    ],
+    "steps_en": [
+      "Cut or fold a 5–8 cm strip long enough for your wrist.",
+      "Wrap it around your wrist or over your sleeve.",
+      "Tie a small knot or secure with a button/velcro.",
+      "Make sure one finger fits underneath."
+    ]
   },
   {
     "recommendation_id": "RW0100",
@@ -1897,7 +3382,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Clean tea towel",
     "transformation_en": "Bandana for a casual look",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed.",
+    "category": "towels",
+    "technique": "bandana",
+    "time_minutes": 3,
+    "steps_el": [
+      "Δίπλωσε το ύφασμα διαγώνια σε τρίγωνο.",
+      "Δίπλωσε τη μακριά πλευρά 2–3 φορές για λωρίδα (ή άφησέ το τρίγωνο).",
+      "Τοποθέτησέ το στο κεφάλι με τις άκρες προς τον αυχένα.",
+      "Δέσε τις άκρες σε κόμπο κάτω από τα μαλλιά."
+    ],
+    "steps_en": [
+      "Fold the fabric diagonally into a triangle.",
+      "Fold the long edge 2–3 times into a band (or keep the triangle).",
+      "Place it on your head with the ends toward the nape.",
+      "Tie the ends in a knot under your hair."
+    ]
   },
   {
     "recommendation_id": "RW0101",
@@ -1916,7 +3416,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Clean tea towel",
     "transformation_en": "Bag decoration",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily.",
+    "category": "towels",
+    "technique": "bag_bow",
+    "time_minutes": 4,
+    "steps_el": [
+      "Δίπλωσε το κομμάτι σε λωρίδα περίπου 5 εκ.",
+      "Τύλιξέ το μία φορά γύρω από τη βάση του χερουλιού.",
+      "Δέσε φιόγκο και ίσιωσε τα «αυτιά».",
+      "Κόψε λοξά τις άκρες για πιο καθαρό αποτέλεσμα."
+    ],
+    "steps_en": [
+      "Fold the piece into a strip about 5 cm wide.",
+      "Wrap it once around the base of the handle.",
+      "Tie a bow and even out the loops.",
+      "Trim the ends at an angle for a cleaner finish."
+    ]
   },
   {
     "recommendation_id": "RW0102",
@@ -1935,7 +3450,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Clean tea towel",
     "transformation_en": "Hat scarf",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "towels",
+    "technique": "hat_scarf",
+    "time_minutes": 8,
+    "steps_el": [
+      "Δίπλωσε το ύφασμα σε λωρίδα 5–8 εκ.",
+      "Τύλιξέ το γύρω από τη βάση του καπέλου.",
+      "Δέσε κόμπο πίσω και άφησε τις άκρες να πέφτουν.",
+      "Φόρεσε το καπέλο και φτιάξε τις άκρες στον αυχένα."
+    ],
+    "steps_en": [
+      "Fold the fabric into a 5–8 cm band.",
+      "Wrap it around the base of the crown.",
+      "Knot it at the back and let the ends fall.",
+      "Put the hat on and arrange the ends at the nape."
+    ]
   },
   {
     "recommendation_id": "RW0103",
@@ -1954,7 +3484,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Woven craft strip",
     "transformation_en": "Decorative belt over clothing",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Wear over normal clothing, not as a standalone garment."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Wear over normal clothing, not as a standalone garment.",
+    "category": "cords",
+    "technique": "belt",
+    "time_minutes": 3,
+    "steps_el": [
+      "Δίπλωσε το ύφασμα/κορδόνι σε λωρίδα περίπου 4–5 εκ. (αν είναι φαρδύ).",
+      "Πέρασέ το γύρω από τη μέση, πάνω από φόρεμα ή φαρδύ πουκάμισο.",
+      "Δέσε φιόγκο ή κόμπο στο πλάι ή μπροστά.",
+      "Τράβα ελαφρά το ρούχο πάνω από τη ζώνη για χαλαρό εφέ."
+    ],
+    "steps_en": [
+      "Fold the fabric/cord into a strip about 4–5 cm wide (if it is wide).",
+      "Pass it around your waist, over a dress or loose shirt.",
+      "Tie a bow or knot at the side or front.",
+      "Pull the garment slightly over the belt for a relaxed look."
+    ]
   },
   {
     "recommendation_id": "RW0104",
@@ -1973,7 +3518,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Woven craft strip",
     "transformation_en": "Bag handle detail",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily.",
+    "category": "cords",
+    "technique": "handle_wrap",
+    "time_minutes": 8,
+    "steps_el": [
+      "Στερέωσε τη μία άκρη στη βάση του χερουλιού με κόμπο.",
+      "Τύλιξε σπειροειδώς γύρω από το χερούλι, λίγο πάνω από το προηγούμενο γύρισμα.",
+      "Συνέχισε μέχρι το σημείο που θες.",
+      "Δέσε την άκρη και κρύψε την κάτω από το τύλιγμα."
+    ],
+    "steps_en": [
+      "Secure one end at the base of the handle with a knot.",
+      "Wrap in a spiral around the handle, slightly overlapping each turn.",
+      "Continue as far as you like.",
+      "Tie off the end and tuck it under the wrap."
+    ]
   },
   {
     "recommendation_id": "RW0105",
@@ -1992,7 +3552,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Woven craft strip",
     "transformation_en": "Hat band",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "cords",
+    "technique": "hat_band",
+    "time_minutes": 10,
+    "steps_el": [
+      "Μέτρησε την περίμετρο του καπέλου πάνω από το γείσο και άφησε 20 εκ. για δέσιμο.",
+      "Τύλιξε το κομμάτι γύρω από τη βάση του καπέλου.",
+      "Δέσε κόμπο ή φιόγκο στο πλάι.",
+      "Στερέωσε με 1–2 βελονιές ή καρφίτσες για να μη γλιστρά."
+    ],
+    "steps_en": [
+      "Measure around the hat above the brim and add 20 cm for tying.",
+      "Wrap the piece around the base of the crown.",
+      "Tie a knot or bow at the side.",
+      "Secure with 1–2 stitches or pins so it does not slip."
+    ]
   },
   {
     "recommendation_id": "RW0106",
@@ -2011,7 +3586,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft flannel scrap",
     "transformation_en": "Hairband",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed.",
+    "category": "scraps",
+    "technique": "hairband",
+    "time_minutes": 3,
+    "steps_el": [
+      "Δίπλωσε ή κόψε το ύφασμα σε λωρίδα 5–8 εκ.",
+      "Πέρασέ το κάτω από τα μαλλιά στον αυχένα.",
+      "Φέρε τις άκρες πάνω από το κεφάλι.",
+      "Δέσε κόμπο στην κορυφή ή στο πλάι και φτιάξε τις άκρες."
+    ],
+    "steps_en": [
+      "Fold or cut the fabric into a 5–8 cm strip.",
+      "Pass it under your hair at the nape.",
+      "Bring the ends up over your head.",
+      "Tie a knot on top or at the side and arrange the ends."
+    ]
   },
   {
     "recommendation_id": "RW0107",
@@ -2030,7 +3620,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft flannel scrap",
     "transformation_en": "Decorative bag braid",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily.",
+    "category": "scraps",
+    "technique": "handle_wrap",
+    "time_minutes": 8,
+    "steps_el": [
+      "Στερέωσε τη μία άκρη στη βάση του χερουλιού με κόμπο.",
+      "Τύλιξε σπειροειδώς γύρω από το χερούλι, λίγο πάνω από το προηγούμενο γύρισμα.",
+      "Συνέχισε μέχρι το σημείο που θες.",
+      "Δέσε την άκρη και κρύψε την κάτω από το τύλιγμα."
+    ],
+    "steps_en": [
+      "Secure one end at the base of the handle with a knot.",
+      "Wrap in a spiral around the handle, slightly overlapping each turn.",
+      "Continue as far as you like.",
+      "Tie off the end and tuck it under the wrap."
+    ]
   },
   {
     "recommendation_id": "RW0108",
@@ -2049,7 +3654,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft flannel scrap",
     "transformation_en": "Small neck scarf",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep the knot loose and avoid constriction."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep the knot loose and avoid constriction.",
+    "category": "scraps",
+    "technique": "neck_scarf",
+    "time_minutes": 8,
+    "steps_el": [
+      "Δίπλωσε το ύφασμα διαγώνια σε τρίγωνο ή σε λωρίδα.",
+      "Τύλιξέ το χαλαρά γύρω από τον λαιμό.",
+      "Δέσε μικρό κόμπο στο πλάι ή μπροστά.",
+      "Γύρισε τον κόμπο ελαφρώς στο πλάι για πιο retro εφέ."
+    ],
+    "steps_en": [
+      "Fold the fabric diagonally into a triangle or a band.",
+      "Wrap it loosely around your neck.",
+      "Tie a small knot at the side or front.",
+      "Turn the knot slightly to the side for a retro feel."
+    ]
   },
   {
     "recommendation_id": "RW0109",
@@ -2068,7 +3688,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Old scarf fabric",
     "transformation_en": "Tied hairband",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed.",
+    "category": "clothes",
+    "technique": "hairband",
+    "time_minutes": 3,
+    "steps_el": [
+      "Δίπλωσε ή κόψε το ύφασμα σε λωρίδα 5–8 εκ.",
+      "Πέρασέ το κάτω από τα μαλλιά στον αυχένα.",
+      "Φέρε τις άκρες πάνω από το κεφάλι.",
+      "Δέσε κόμπο στην κορυφή ή στο πλάι και φτιάξε τις άκρες."
+    ],
+    "steps_en": [
+      "Fold or cut the fabric into a 5–8 cm strip.",
+      "Pass it under your hair at the nape.",
+      "Bring the ends up over your head.",
+      "Tie a knot on top or at the side and arrange the ends."
+    ]
   },
   {
     "recommendation_id": "RW0110",
@@ -2087,7 +3722,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Old scarf fabric",
     "transformation_en": "Small wrist cuff",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "clothes",
+    "technique": "wrist_cuff",
+    "time_minutes": 5,
+    "steps_el": [
+      "Κόψε ή δίπλωσε λωρίδα 5–8 εκ. πλάτος, αρκετά μακριά για τον καρπό.",
+      "Τύλιξέ τη γύρω από τον καρπό ή πάνω από το μανίκι.",
+      "Δέσε μικρό κόμπο ή στερέωσε με κουμπί/velcro.",
+      "Βεβαιώσου ότι χωράει ένα δάχτυλο από κάτω."
+    ],
+    "steps_en": [
+      "Cut or fold a 5–8 cm strip long enough for your wrist.",
+      "Wrap it around your wrist or over your sleeve.",
+      "Tie a small knot or secure with a button/velcro.",
+      "Make sure one finger fits underneath."
+    ]
   },
   {
     "recommendation_id": "RW0111",
@@ -2106,7 +3756,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Old scarf fabric",
     "transformation_en": "Fabric bag accent",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily.",
+    "category": "clothes",
+    "technique": "bag_charm",
+    "time_minutes": 10,
+    "steps_el": [
+      "Μάζεψε ή δίπλωσε το κομμάτι σε μικρό σχήμα.",
+      "Δέσε στη μία άκρη ένα κορδονάκι ή κλειδοκρίκο.",
+      "Πέρασέ το στο χερούλι ή στο φερμουάρ της τσάντας.",
+      "Σφίξε καλά τον κόμπο ώστε να μη φύγει."
+    ],
+    "steps_en": [
+      "Gather or fold the piece into a small shape.",
+      "Tie a short cord or key ring to one end.",
+      "Hook it onto the bag handle or zipper.",
+      "Tighten the knot so it cannot fall off."
+    ]
   },
   {
     "recommendation_id": "RW0112",
@@ -2125,7 +3790,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft decorative tassel",
     "transformation_en": "Bag charm",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily.",
+    "category": "cords",
+    "technique": "bag_charm",
+    "time_minutes": 5,
+    "steps_el": [
+      "Μάζεψε ή δίπλωσε το κομμάτι σε μικρό σχήμα.",
+      "Δέσε στη μία άκρη ένα κορδονάκι ή κλειδοκρίκο.",
+      "Πέρασέ το στο χερούλι ή στο φερμουάρ της τσάντας.",
+      "Σφίξε καλά τον κόμπο ώστε να μη φύγει."
+    ],
+    "steps_en": [
+      "Gather or fold the piece into a small shape.",
+      "Tie a short cord or key ring to one end.",
+      "Hook it onto the bag handle or zipper.",
+      "Tighten the knot so it cannot fall off."
+    ]
   },
   {
     "recommendation_id": "RW0113",
@@ -2144,7 +3824,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft decorative tassel",
     "transformation_en": "Hat decoration",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "cords",
+    "technique": "hat_accent",
+    "time_minutes": 5,
+    "steps_el": [
+      "Διάλεξε το σημείο: πλάι του καπέλου ή πάνω στη λωρίδα.",
+      "Μάζεψε το κομμάτι σε μικρό σχήμα ή φιόγκο.",
+      "Στερέωσέ το με παραμάνα ή μερικές βελονιές.",
+      "Έλεγξε ότι κάθεται σταθερά όταν κουνάς το κεφάλι."
+    ],
+    "steps_en": [
+      "Choose the spot: side of the hat or on the band.",
+      "Gather the piece into a small shape or bow.",
+      "Fasten it with a safety pin or a few stitches.",
+      "Check it stays put when you move your head."
+    ]
   },
   {
     "recommendation_id": "RW0114",
@@ -2163,7 +3858,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft decorative tassel",
     "transformation_en": "Hairband accent",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed.",
+    "category": "cords",
+    "technique": "hair_accent",
+    "time_minutes": 13,
+    "steps_el": [
+      "Φόρεσε μια απλή στέκα ή κορδέλα ως βάση.",
+      "Ετοίμασε το διακοσμητικό κομμάτι (φούντα, δίχτυ, πομ-πομ).",
+      "Στερέωσέ το στη βάση με κλωστή ή μικρό τσιμπιδάκι.",
+      "Έλεγξε ότι δεν ακουμπά τα μάτια και δεν κουνιέται."
+    ],
+    "steps_en": [
+      "Use a simple headband or ribbon as a base.",
+      "Prepare the decorative piece (tassel, mesh, pom-pom).",
+      "Attach it to the base with thread or a small clip.",
+      "Check it stays clear of your eyes and does not wobble."
+    ]
   },
   {
     "recommendation_id": "RW0115",
@@ -2182,7 +3892,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft craft pom-pom",
     "transformation_en": "Bag charm",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily.",
+    "category": "cords",
+    "technique": "bag_charm",
+    "time_minutes": 5,
+    "steps_el": [
+      "Μάζεψε ή δίπλωσε το κομμάτι σε μικρό σχήμα.",
+      "Δέσε στη μία άκρη ένα κορδονάκι ή κλειδοκρίκο.",
+      "Πέρασέ το στο χερούλι ή στο φερμουάρ της τσάντας.",
+      "Σφίξε καλά τον κόμπο ώστε να μη φύγει."
+    ],
+    "steps_en": [
+      "Gather or fold the piece into a small shape.",
+      "Tie a short cord or key ring to one end.",
+      "Hook it onto the bag handle or zipper.",
+      "Tighten the knot so it cannot fall off."
+    ]
   },
   {
     "recommendation_id": "RW0116",
@@ -2201,7 +3926,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft craft pom-pom",
     "transformation_en": "Hat decoration",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "cords",
+    "technique": "hat_accent",
+    "time_minutes": 5,
+    "steps_el": [
+      "Διάλεξε το σημείο: πλάι του καπέλου ή πάνω στη λωρίδα.",
+      "Μάζεψε το κομμάτι σε μικρό σχήμα ή φιόγκο.",
+      "Στερέωσέ το με παραμάνα ή μερικές βελονιές.",
+      "Έλεγξε ότι κάθεται σταθερά όταν κουνάς το κεφάλι."
+    ],
+    "steps_en": [
+      "Choose the spot: side of the hat or on the band.",
+      "Gather the piece into a small shape or bow.",
+      "Fasten it with a safety pin or a few stitches.",
+      "Check it stays put when you move your head."
+    ]
   },
   {
     "recommendation_id": "RW0117",
@@ -2220,7 +3960,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Soft craft pom-pom",
     "transformation_en": "Scrunchie detail",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed.",
+    "category": "cords",
+    "technique": "hair_accent",
+    "time_minutes": 13,
+    "steps_el": [
+      "Φόρεσε μια απλή στέκα ή κορδέλα ως βάση.",
+      "Ετοίμασε το διακοσμητικό κομμάτι (φούντα, δίχτυ, πομ-πομ).",
+      "Στερέωσέ το στη βάση με κλωστή ή μικρό τσιμπιδάκι.",
+      "Έλεγξε ότι δεν ακουμπά τα μάτια και δεν κουνιέται."
+    ],
+    "steps_en": [
+      "Use a simple headband or ribbon as a base.",
+      "Prepare the decorative piece (tassel, mesh, pom-pom).",
+      "Attach it to the base with thread or a small clip.",
+      "Check it stays clear of your eyes and does not wobble."
+    ]
   },
   {
     "recommendation_id": "RW0118",
@@ -2239,7 +3994,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Patchwork square",
     "transformation_en": "Decorative bag patch",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Fasten securely so it cannot detach easily.",
+    "category": "scraps",
+    "technique": "bag_patch",
+    "time_minutes": 15,
+    "steps_el": [
+      "Κόψε το ύφασμα στο σχήμα που θες (τετράγωνο, καρδιά, κύκλο).",
+      "Γύρισε τις άκρες προς τα μέσα ή κάνε ζιγκ-ζαγκ για να μη ξεφτίζει.",
+      "Τοποθέτησέ το στην τσάντα και στερέωσε με καρφίτσες.",
+      "Ράψε γύρω-γύρω ή κόλλησε με θερμοκολλητική ταινία."
+    ],
+    "steps_en": [
+      "Cut the fabric to the shape you like (square, heart, circle).",
+      "Fold the edges in or zig-zag them so they do not fray.",
+      "Position it on the bag and hold with pins.",
+      "Sew around it or use iron-on adhesive."
+    ]
   },
   {
     "recommendation_id": "RW0119",
@@ -2258,7 +4028,22 @@
     "synthetic_data": "yes",
     "object_name_en": "Patchwork square",
     "transformation_en": "Small hair ribbon",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties. Keep eyes and vision unobstructed.",
+    "category": "scraps",
+    "technique": "hairband",
+    "time_minutes": 3,
+    "steps_el": [
+      "Δίπλωσε ή κόψε το ύφασμα σε λωρίδα 5–8 εκ.",
+      "Πέρασέ το κάτω από τα μαλλιά στον αυχένα.",
+      "Φέρε τις άκρες πάνω από το κεφάλι.",
+      "Δέσε κόμπο στην κορυφή ή στο πλάι και φτιάξε τις άκρες."
+    ],
+    "steps_en": [
+      "Fold or cut the fabric into a 5–8 cm strip.",
+      "Pass it under your hair at the nape.",
+      "Bring the ends up over your head.",
+      "Tie a knot on top or at the side and arrange the ends."
+    ]
   },
   {
     "recommendation_id": "RW0120",
@@ -2277,6 +4062,21 @@
     "synthetic_data": "yes",
     "object_name_en": "Patchwork square",
     "transformation_en": "Decorative cuff",
-    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties."
+    "safety_notes_en": "Use only clean, dry materials. Ensure a comfortable fit without tight ties.",
+    "category": "scraps",
+    "technique": "wrist_cuff",
+    "time_minutes": 10,
+    "steps_el": [
+      "Κόψε ή δίπλωσε λωρίδα 5–8 εκ. πλάτος, αρκετά μακριά για τον καρπό.",
+      "Τύλιξέ τη γύρω από τον καρπό ή πάνω από το μανίκι.",
+      "Δέσε μικρό κόμπο ή στερέωσε με κουμπί/velcro.",
+      "Βεβαιώσου ότι χωράει ένα δάχτυλο από κάτω."
+    ],
+    "steps_en": [
+      "Cut or fold a 5–8 cm strip long enough for your wrist.",
+      "Wrap it around your wrist or over your sleeve.",
+      "Tie a small knot or secure with a button/velcro.",
+      "Make sure one finger fits underneath."
+    ]
   }
 ]
